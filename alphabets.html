@@ -49,7 +49,7 @@
 	<tr><td>[ 24 ] [[Lycien]]</td></tr>
 	<tr><td>[ 25 ] [[Vieil italique]]</td></tr>
 	<tr><td>[ 26 ] [[Phénicien]]</td></tr>
-	<tr><td>[ 27 ] [[Braille]]</td></tr>
+	<tr><td>[ 27 ] ⠃⠗⠁⠊⠇⠇⠑</td></tr>
 </table>
 </div>
 
@@ -202,30 +202,36 @@
 	chiffres["Braille"] = chiffres["Normal"];
 
 	function alphabets() {
-		sortie.innerText = "";
+		texte = "";
 		styles = Object.keys(majuscules);
 		for (style of styles) {
 			for (caractère of entrée.value) {
+				diacritique = "";
 				if (caractère in décompositions) {
-					console.log(caractère);
-					// diacritique = décompositions[caractère][1];
-					// caractère = décompositions[caractère][0];
-					// sortie.innerText += diacritique;
+					diacritique = décompositions[caractère][1];
+					caractère = décompositions[caractère][0];
 				}
 				if (caractère >= "A" && caractère <= "Z") {
 					indice = caractère.charCodeAt(0) - "A".charCodeAt(0);
-					sortie.innerText += majuscules[style][indice] ?? caractère;
+					texte += majuscules[style][indice] ?? caractère;
+					texte += diacritique;
 				} else if (caractère >= "a" && caractère <= "z") {
 					indice = caractère.charCodeAt(0) - "a".charCodeAt(0);
-					sortie.innerText += minuscules[style][indice] ?? caractère;
+					texte += minuscules[style][indice] ?? caractère;
+					texte += diacritique;
 				} else if (caractère >= "0" && caractère <= "9") {
 					indice = parseInt(caractère);
-					sortie.innerText += chiffres[style][indice] ?? caractère;
-				} else {sortie.innerText += caractère;}
+					texte += chiffres[style][indice] ?? caractère;
+					texte += diacritique;
+				} else {
+					texte += caractère;
+					texte += diacritique;
+				}
 			}
-			sortie.innerText += "\n";
+			texte += "\n";
 		}
-		exporterTexte(sortie.innerText);
+		sortie.innerText = texte
+		// exporterTexte(texte);
 	}
 </script>
 
