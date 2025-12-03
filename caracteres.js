@@ -24,8 +24,6 @@ document.addEventListener(
 		nouvelleLigneStatistiques("Défaut", total - nombreDeClasses, total);
 		for (classe in occurrences) {nouvelleLigneStatistiques(classe, occurrences[classe], total);}
 		nouvelleLigneStatistiques("Total", total, total);
-		lettres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεζηθικλμνξοπρστυφχψωАБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзиклмнопрстуфхцчшщъыьэюя";
-		document.querySelectorAll(".aléatoire").forEach(function (aléatoire) {aléatoire.innerText = lettres[Math.floor(Math.random() * lettres.length)];})
 	}
 );
 
