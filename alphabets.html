@@ -12,10 +12,45 @@
 
 <h1>Alphabets</h1>
 
+<p>Entrez le texte à réécrire avec les différents alphabets :</p>
+<input type = "text" placeholder = "Texte" id = "entrée">
+<br>
+<button onclick = "alphabets()">Réécrire</button>
+<table><tr><th onclick = "copier(this)" id = "sortie"></th></tr></table>
+<br>
+
 <div id = "contenu">
-<input type = "text" id = "entrée">
-<button onclick = "alphabets()">Fusionner</button><br>
-<button onclick = "copier(this)" id = "sortie"></button>
+<table>
+	<tr><td>[ 0 ] Normal</td></tr>
+	<tr><td>[ 1 ] 𝔸𝕛𝕠𝕦𝕣𝕖́</td></tr>
+	<tr><td>[ 2 ] 𝐌𝐚𝐭𝐡𝐞́𝐦𝐚𝐭𝐢𝐪𝐮𝐞 𝐠𝐫𝐚𝐬</td></tr>
+	<tr><td>[ 3 ] 𝑀𝑎𝑡ℎ𝑒́𝑚𝑎𝑡𝑖𝑞𝑢𝑒 𝑖𝑡𝑎𝑙𝑖𝑞𝑢𝑒</td></tr>
+	<tr><td>[ 4 ] 𝑴𝒂𝒕𝒉𝒆́𝒎𝒂𝒕𝒊𝒒𝒖𝒆 𝒊𝒕𝒂𝒍𝒊𝒒𝒖𝒆 𝒈𝒓𝒂𝒔</td></tr>
+	<tr><td>[ 5 ] ℛℴ𝓃𝒹</td></tr>
+	<tr><td>[ 6 ] 𝓡𝓸𝓷𝓭 𝓰𝓻𝓪𝓼</td></tr>
+	<tr><td>[ 7 ] 𝔊𝔬𝔱𝔥𝔦𝔮𝔲𝔢</td></tr>
+	<tr><td>[ 8 ] 𝕲𝖔𝖙𝖍𝖎𝖖𝖚𝖊 𝖌𝖗𝖆𝖘</td></tr>
+	<tr><td>[ 9 ] 🄴🄽🄲🄰🄳🅁🄴́</td></tr>
+	<tr><td>[ 10 ] 🅴🅽🅲🅰🅳🆁🅴́ 🅽🅾🅸🆁</td></tr>
+	<tr><td>[ 11 ] 𐌲𐍉𐍄𐌹𐌵𐍅𐌴</td></tr>
+	<tr><td>[ 11 ] [[Grec]]</td></tr>
+	<tr><td>[ 12 ] [[Cyrillique]]</td></tr>
+	<tr><td>[ 13 ] [[Copte]]</td></tr>
+	<tr><td>[ 14 ] 𝙼𝚊𝚝𝚑𝚎́𝚖𝚊𝚝𝚒𝚚𝚞𝚎 𝚊̀ 𝚌𝚑𝚊𝚜𝚜𝚎 𝚏𝚒𝚡𝚎</td></tr>
+	<tr><td>[ 15 ] 𝖬𝖺𝗍𝗁𝖾́𝗆𝖺𝗍𝗂𝗊𝗎𝖾 𝗌𝖺𝗇𝗌 𝖾𝗆𝗉𝖺𝗍𝗍𝖾𝗆𝖾𝗇𝗍</td></tr>
+	<tr><td>[ 16 ] 𝗠𝗮𝘁𝗵𝗲́𝗺𝗮𝘁𝗶𝗾𝘂𝗲 𝗴𝗿𝗮𝘀 𝘀𝗮𝗻𝘀 𝗲𝗺𝗽𝗮𝘁𝘁𝗲𝗺𝗲𝗻𝘁</td></tr>
+	<tr><td>[ 17 ] 𝘔𝘢𝘵𝘩𝘦́𝘮𝘢𝘵𝘪𝘲𝘶𝘦 𝘪𝘵𝘢𝘭𝘪𝘲𝘶𝘦 𝘴𝘢𝘯𝘴 𝘦𝘮𝘱𝘢𝘵𝘵𝘦𝘮𝘦𝘯𝘵</td></tr>
+	<tr><td>[ 18 ] 𝙈𝙖𝙩𝙝𝙚́𝙢𝙖𝙩𝙞𝙦𝙪𝙚 𝙞𝙩𝙖𝙡𝙞𝙦𝙪𝙚 𝙜𝙧𝙖𝙨 𝙨𝙖𝙣𝙨 𝙚𝙢𝙥𝙖𝙩𝙩𝙚𝙢𝙚𝙣𝙩</td></tr>
+	<tr><td>[ 19 ] [[𝝘𝞀𝝴𝝲 - 𝝡𝝰𝞃𝝶𝝴́𝝻𝝰𝞃𝝸q𝞄𝝴 gras sans empattement]]</td></tr>
+	<tr><td>[ 20 ] [[𝞒𝞺𝞮𝞬 - 𝞛𝞪𝞽𝞰𝞮́𝞵𝞪𝞽𝞲q𝞾𝞮 italique gras sans empattement]]</td></tr>
+	<tr><td>[ 21 ] [[𝚪𝛒𝛆𝛄 - 𝚳𝛂𝛕𝛈𝛆́𝛍𝛂𝛕𝛊q𝛖𝛆 gras]]</td></tr>
+	<tr><td>[ 22 ] [[𝛤𝜌𝜀𝛾 - 𝛭𝛼𝜏𝜂𝜀́𝜇𝛼𝜏𝜄q𝜐𝜀 italique]]</td></tr>
+	<tr><td>[ 23 ] [[𝜞𝝆𝜺𝜸 - 𝜧𝜶𝝉𝜼𝜺́𝝁𝜶𝝉𝜾q𝝊𝜺 italique gras]]</td></tr>
+	<tr><td>[ 24 ] [[Lycien]]</td></tr>
+	<tr><td>[ 25 ] [[Vieil italique]]</td></tr>
+	<tr><td>[ 26 ] [[Phénicien]]</td></tr>
+	<tr><td>[ 27 ] [[Braille]]</td></tr>
+</table>
 </div>
 
 <script>
@@ -172,6 +207,7 @@
 		for (style of styles) {
 			for (caractère of entrée.value) {
 				if (caractère in décompositions) {
+					console.log(caractère);
 					// diacritique = décompositions[caractère][1];
 					// caractère = décompositions[caractère][0];
 					// sortie.innerText += diacritique;
@@ -192,9 +228,6 @@
 		exporterTexte(sortie.innerText);
 	}
 </script>
-
-<h2>Statistiques</h2>
-<table id = "statistiques"></table>
 
 </body>
 </html>
