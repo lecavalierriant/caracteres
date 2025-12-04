@@ -30,7 +30,8 @@ document.addEventListener(
 function nouvelleLigneStatistiques(classe, occurrences, total) {
 	pourcentage = (occurrences / total) * 100;
 	ligne = statistiques.insertRow();
-	ligne.insertCell(0).outerHTML = "<td class = '" + classe + "'>" + classe + "</td>";
+	ligne.className = classe;
+	ligne.insertCell(0).textContent = classe;
 	ligne.insertCell(1).textContent = occurrences;
 	ligne.insertCell(2).textContent = pourcentage.toFixed(1).replace(".", ",") + " %";
 }

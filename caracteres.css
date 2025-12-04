@@ -62,9 +62,10 @@ th {padding: 15px;}
 
 .inutile {background-color: #cc0000;}
 .vide {background-color: #cccccc;}
-.vide:hover {cursor: not-allowed;}
+.vide *:hover {cursor: not-allowed;}
 .utile {background-color: #00cccc}
-.doublon {border: 2px dashed #cccc00;}
+.doublon td,
+.doublon th {border: 2px dashed #cccc00;}
 
 @media (orientation: landscape) and (min-width: 910px) {
 	#contenu {columns: 2;}
