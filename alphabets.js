@@ -113,6 +113,10 @@ majuscules["Encadré noir"] = ["🅰", "🅱", "🅲", "🅳", "🅴", "🅵", "
 minuscules["Encadré noir"] = majuscules["Encadré noir"];
 chiffres["Encadré noir"] = chiffres["Normal"];
 
+majuscules["Cerclé"] = "ⒶⒷⒸⒹⒺⒻⒼⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇⓈⓉⓊⓋⓌⓍⓎⓏ";
+minuscules["Cerclé"] = "ⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝⓞⓟⓠⓡⓢⓣⓤⓥⓦⓧⓨⓩ";
+chiffres["Cerclé"] = "⓪①②③④⑤⑥⑦⑧⑨";
+
 majuscules["Gotique"] = ["𐌰", "𐌱", "𐌲", "𐌳", "𐌴", "𐍆", "𐌲", "𐌷", "𐌹", "𐌹", "𐌺", "𐌻", "𐌼", "𐌽", "𐍉", "𐍀", "𐌵", "𐍂", "𐍃", "𐍄", "𐍅", "𐍅", "𐍅𐍅", "𐍇", "𐍅", "𐌶"];
 minuscules["Gotique"] = majuscules["Gotique"];
 chiffres["Gotique"] = chiffres["Normal"];
