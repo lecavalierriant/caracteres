@@ -24,10 +24,12 @@ button {
 	font-family: consolas;
 	background: #303841;
 	font-weight: bold;
+	border-radius: 5px;
 }
 
 #contenu {
 	border: 4px #ffffff solid;
+	border-radius: 15px;
 	padding: 1%;
 }
 
@@ -42,15 +44,20 @@ input {
 	position: sticky;
 	top: 1%;
 	background-color: #303841;
+	border-radius: 5px;
 }
 
 table {
 	border: 2px #ffffff solid;
+	border-radius: 10px;
 	width: auto;
 	margin: auto;
 }
 
-td {transition: ease 0.2s;}
+td {
+	transition: ease 0.2s;
+	border-radius: 5px;
+}
 td:hover {
 	cursor: pointer;
 	background-color: #ffffff;
@@ -58,20 +65,27 @@ td:hover {
 	text-shadow: 0 0 0;
 }
 
-th {padding: 15px;}
+th {
+	padding: 15px;
+	border-radius: 5px;
+}
 
 .inutile {background-color: #cc0000;}
 .vide {background-color: #cccccc;}
 .vide *:hover {cursor: not-allowed;}
 .utile {background-color: #00cccc}
-.doublon td,
-.doublon th {border: 2px dashed #cccc00;}
+.doublon * {border: 2px dashed #cccc00;}
 
 @media (orientation: landscape) and (min-width: 910px) {
-	#contenu {columns: 2;}
-	body {font-size: 100%;}
+
+#contenu {columns: 2;}
+body {font-size: 100%;}
+
 }
+
 @media (orientation: landscape) and (min-width: 1350px) {
-	#contenu {columns: 3;}
-	body {font-size: 100%;}
+
+#contenu {columns: 3;}
+body {font-size: 100%;}
+
 }
