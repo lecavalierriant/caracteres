@@ -26,10 +26,7 @@ button {
 	padding: 1%;
 }
 
-iframe {
-	width: 100%;
-	border: 0;
-}
+iframe {width: 100%;}
 
 input {
 	font-size: 150%;
