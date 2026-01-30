@@ -40,8 +40,6 @@ input {
 table {
 	border: 2px #ffffff solid;
 	border-radius: 10px;
-	width: auto;
-	margin: auto;
 }
 
 td {
