@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang = "fr">
+<head>
+	<title>S long</title>
+	<meta charset = "utf-8">
+	<link rel = "stylesheet" href = "../lecavalierriant/lecavalierriant.css">
+	<link rel = "stylesheet" href = "caracteres.css">
+	<link rel = "icon" href = "caracteres.ico">
+	<script src = "caracteres.js"></script>
+	<script src = "s-long.js"></script>
+</head>
+<body>
+<iframe src = "caracteres.html"></iframe>
+
+<h1>S long</h1>
+
+<p>Entrez le texte à réécrire en utilisant le s long « ſ » :</p>
+<input type = "text" placeholder = "Texte" id = "entrée">
+<br>
+<button onclick = "moderniser()">ſ -> s</button>
+<button onclick = "archaïser()">s -> ſ</button>
+<button onclick = "exporterTexte()" style = "display: none;">Exporte en fichier texte (.txt)</button>
+<table><tr><th onclick = "copier(this)" id = "sortie"></th></tr></table>
+
+</body>
+</html>
