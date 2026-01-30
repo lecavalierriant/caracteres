@@ -17,9 +17,7 @@ body {font-size: 200%;}
 
 button {
 	font-family: consolas;
-	background: #303841;
 	font-weight: bold;
-	border-radius: 5px;
 }
 
 #contenu {
