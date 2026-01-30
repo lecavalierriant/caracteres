@@ -1,18 +1,3 @@
-* {
-	text-align: center;
-	font-family: garamond;
-	color: #ffffff;
-}
-
-a {
-	text-decoration: none;
-	transition: ease 0.2s;
-}
-a:hover {
-	color: #abcdef;
-	cursor: pointer;
-}
-
 body {font-size: 200%;}
 
 button {
