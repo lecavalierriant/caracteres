@@ -19,7 +19,7 @@ td:hover {
 	cursor: pointer;
 	background-color: #ffffff;
 	color: #000000;
-	text-shadow: 0 0 0;
+	text-shadow: none;
 }
 
 .inutile {background-color: #cc0000;}
