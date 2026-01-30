@@ -42,10 +42,7 @@ table {
 	border-radius: 10px;
 }
 
-td {
-	transition: ease 0.2s;
-	border-radius: 5px;
-}
+td {transition: ease 0.2s;}
 td:hover {
 	cursor: pointer;
 	background-color: #ffffff;
