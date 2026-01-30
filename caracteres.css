@@ -13,12 +13,7 @@ a:hover {
 	cursor: pointer;
 }
 
-body {
-	background-color: #303841;
-	text-shadow: 1px 1px 1px #000000;
-	margin: 2%;
-	font-size: 200%;
-}
+body {font-size: 200%;}
 
 button {
 	font-family: consolas;
