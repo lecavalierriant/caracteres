@@ -4,4 +4,4 @@
 
 Une plateforme pour manipuler des caractères.
 
-Lien : https://lecavalierriant.github.io/caracteres/caracteres.html
+Lien : https://lecavalierriant.github.io/caracteres/caracteres.html
