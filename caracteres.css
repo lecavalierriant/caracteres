@@ -12,8 +12,6 @@ input {
 	top: 1%;
 }
 
-table {border: 2px #ffffff solid;}
-
 td {transition: ease 0.2s;}
 td:hover {
 	cursor: pointer;
@@ -26,7 +24,7 @@ td:hover {
 .vide {background-color: #cccccc;}
 .vide *:hover {cursor: not-allowed;}
 .utile {background-color: #00cccc}
-.doublon * {border: 2px dashed #cccc00;}
+.doublon *:not(button) {border: 2px dashed #cccc00;}
 
 @media (orientation: landscape) and (min-width: 910px) {
 
