@@ -1,8 +1,10 @@
-#contenu {
+body > div {
 	border: 4px #ffffff solid;
 	border-radius: 15px;
 	padding: 1%;
 }
+
+iframe {display: none}
 
 input {
 	font-size: 150%;
@@ -24,14 +26,18 @@ td:hover {
 
 @media (orientation: landscape) and (min-width: 910px) {
 
-#contenu {columns: 2;}
+body > div {columns: 2;}
 body {font-size: 100%;}
+iframe {display: block;}
+header {display: none;}
 
 }
 
 @media (orientation: landscape) and (min-width: 1350px) {
 
-#contenu {columns: 3;}
+body > div {columns: 3;}
 body {font-size: 100%;}
+iframe {display: block;}
+header {display: none;}
 
 }
