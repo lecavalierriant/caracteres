@@ -192,3 +192,11 @@ chiffres["Mathématique italique gras sans empattement"] = chiffres["Normal"];
 // majuscules["Lycien"] = ["𐊀", "𐊂", "𐊄", "𐊅", "𐊆", "𐊇", "𐊄", "𐊛", "𐊊", "𐊊", "𐊋", "𐊍", "𐊎", "𐊏", "𐊒", "𐊓", "𐊔", "𐊕", "𐊖", "𐊗", majuscules["Normal"][20], majuscules["Normal"][21], majuscules["Normal"][22], majuscules["Normal"][23], "𐊈"];
 // minuscules["Lycien"] = majuscules["Lycien"];
 // chiffres["Lycien"] = chiffres["Normal"];
+
+// majuscules["Modificatif"] = ["ᴬ", "ᴮ", "", "ᴰ", "ᴱ", "", "ᴳ", "ᴴ", "ᴵ", "ᴶ", "ᴷ", "ᴸ", "ᴹ", "ᴺ", "ᴼ", "ᴾ", majuscules["Normal"][17], "ᴿ", majuscules["Normal"][19], "ᵀ", "ᵁ", "ⱽ", "ᵂ", majuscules["Normal"][24], majuscules["Normal"][25], majuscules["Normal"][26]];
+// minuscules["Modificatif"] = ["ᵃ", "ᵇ", "ᶜ", "ᵈ", "ᵉ", "ᶠ", "ᵍ", "ʰ", "ⁱ", "ʲ", "ᵏ", "ˡ", "ᵐ", "ⁿ", "ᵒ", "ᵖ", "𐞥", "ʳ", "ˢ", "ᵗ", "ᵘ", "ᵛ", "ʷ", "ˣ", "ʸ", "ᶻ"];
+// chiffres["Modificatif"] = ["⁰", "¹", "²", "³", "⁴", "⁵", "⁶", "⁷", "⁸", "⁹"];
+
+// majuscules["Indice"] = majuscules["Normal"];
+// minuscules["Indice"] = ["ₐ", minuscules["Normal"][2], minuscules["Normal"][3], minuscules["Normal"][4], "ₑ", minuscules["Normal"][6], minuscules["Normal"][7], "ₕ", "ᵢ", "ⱼ", "ₖ", "ₗ", "ₘ", "ₙ", "ₒ", "ₚ", minuscules["Normal"][17], "ᵣ", "ₛ", "ₜ", "ᵤ", "ᵥ", minuscules["Normal"][23], "ₓ", minuscules["Normal"][25], minuscules["Normal"][26]];
+// chiffres["Indice"] = ["₀", "₁", "₂", "₃", "₄", "₅", "₆", "₇", "₈", "₉"];
