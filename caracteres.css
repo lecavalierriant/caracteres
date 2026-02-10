@@ -4,8 +4,6 @@ body > div {
 	padding: 1%;
 }
 
-iframe {display: none}
-
 input {
 	font-size: 150%;
 	position: sticky;
@@ -24,20 +22,6 @@ td:hover {
 .utile {background-color: #00cccc}
 .doublon *:not(button) {border: 2px dashed #cccc00;}
 
-@media (orientation: landscape) and (min-width: 910px) {
+@media (min-width: 910px) {body > div {columns: 2;}}
 
-body > div {columns: 2;}
-body {font-size: 100%;}
-iframe {display: block;}
-header {display: none;}
-
-}
-
-@media (orientation: landscape) and (min-width: 1350px) {
-
-body > div {columns: 3;}
-body {font-size: 100%;}
-iframe {display: block;}
-header {display: none;}
-
-}
+@media (min-width: 1350px) {body > div {columns: 3;}}
