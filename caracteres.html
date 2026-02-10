@@ -5,20 +5,28 @@
 	<meta charset = "utf-8">
 	<link rel = "stylesheet" href = "../lecavalierriant/lecavalierriant.css">
 	<link rel = "stylesheet" href = "caracteres.css">
-	<style>body {font-size: 150%;}</style>
+	<style>
+		div {display: inline-flex;}
+		h2 {margin: 0 10px 0 10px;}
+		@media (min-height: 200px) {
+			body > div {
+				columns: 1;
+				display: block;
+			}
+			h2 {margin: .75em}
+		}
+	</style>
 	<link rel = "icon" href = "caracteres.ico">
 </head>
 <body>
-<table>
-	<tr>
-		<th><a href = "alphabets.html" target = "_top">Alphabets</a></th>
-		<th><a href = "alt.html" target = "_top">Alt +</a></th>
-		<th><a href = "diacritiques.html" target = "_top">Diacritiques</a></th>
-		<th><a href = "entites-html.html" target = "_top">Entités HTML</a></th>
-		<th><a href = "indicateurs-regionaux.html" target = "_top">Indicateurs régionaux</a></th>
-		<th><a href = "renverses.html" target = "_top">Renversés</a></th>
-		<th><a href = "symboles.html" target = "_top">Symboles</a></th>
-	</tr>
-</table>
+	<div>
+		<h2><a href = "alphabets.html" target = "_top">Alphabets</a></h2>
+		<h2><a href = "alt.html" target = "_top">Alt +</a></h2>
+		<h2><a href = "diacritiques.html" target = "_top">Diacritiques</a></h2>
+		<h2><a href = "entites-html.html" target = "_top">Entités HTML</a></h2>
+		<h2><a href = "indicateurs-regionaux.html" target = "_top">Indicateurs régionaux</a></h2>
+		<h2><a href = "renverses.html" target = "_top">Renversés</a></h2>
+		<h2><a href = "symboles.html" target = "_top">Symboles</a></h2>
+	</div>
 </body>
 </html>
