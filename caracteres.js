@@ -35,3 +35,13 @@ function nouvelleLigneStatistiques(classe, occurrences, total) {
 	ligne.insertCell(1).textContent = occurrences;
 	ligne.insertCell(2).textContent = pourcentage.toFixed(1).replace(".", ",") + " %";
 }
+
+function exporterTexte() {
+	blob = new Blob([sortie.innerText], {type: "text/plain"});
+	lien = document.createElement("a");
+	lien.href = URL.createObjectURL(blob);
+	lien.download = "Export.txt";
+	lien.click();
+	URL.revokeObjectURL(lien.href);
+}
+
