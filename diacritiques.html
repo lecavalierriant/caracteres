@@ -10,9 +10,9 @@
 	<script>
 		function lettres() {
 			lettres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-			document.querySelectorAll("span").forEach(
-				function (span) {
-					span.innerText = lettres[Math.floor(Math.random() * lettres.length)];
+			document.querySelectorAll("table:not(#statistiques) td").forEach(
+				function (td) {
+					td.innerText = lettres[Math.floor(Math.random() * lettres.length)] + td.innerText[1];
 				}
 			)
 		}
@@ -33,20 +33,20 @@
 
 <div>
 <table>
-	<tr><th><button>0</button></th><td><span></span>&#x300;</td><th>Grave</th></tr>
-	<tr><th><button>1</button></th><td><span></span>&#x301;</td><th>Aigu</th></tr>
-	<tr><th><button>2</button></th><td><span></span>&#x302;</td><th>Circonflexe</th></tr>
-	<tr><th><button>3</button></th><td><span></span>&#x303;</td><th>Tilde</th></tr>
-	<tr><th><button>4</button></th><td><span></span>&#x304;</td><th>Macron</th></tr>
-	<tr><th><button>5</button></th><td><span></span>&#x305;</td><th>Tiret haut</th></tr>
-	<tr><th><button>6</button></th><td><span></span>&#x306;</td><th>Brève</th></tr>
-	<tr><th><button>7</button></th><td><span></span>&#x307;</td><th>Point en chef</th></tr>
-	<tr><th><button>8</button></th><td><span></span>&#x308;</td><th>Tréma</th></tr>
-	<tr><th><button>A</button></th><td><span></span>&#x30A;</td><th>Rond en chef</th></tr>
-	<tr><th><button>C</button></th><td><span></span>&#x30C;</td><th>Caron</th></tr>
-	<tr><th><button>27</button></th><td><span></span>&#x327;</td><th>Cédille</th></tr>
-	<tr><th><button>32</button></th><td><span></span>&#x332;</td><th>Trait souscrit</th></tr>
-	<tr><th><button>42</button></th><td><span></span>&#x342;</td><th>Circonflexe grec</th></tr>
+	<tr><th><button>0</button></th><td>A&#x300;</td><th>Grave</th></tr>
+	<tr><th><button>1</button></th><td>A&#x301;</td><th>Aigu</th></tr>
+	<tr><th><button>2</button></th><td>A&#x302;</td><th>Circonflexe</th></tr>
+	<tr><th><button>3</button></th><td>A&#x303;</td><th>Tilde</th></tr>
+	<tr><th><button>4</button></th><td>A&#x304;</td><th>Macron</th></tr>
+	<tr><th><button>5</button></th><td>A&#x305;</td><th>Tiret haut</th></tr>
+	<tr><th><button>6</button></th><td>A&#x306;</td><th>Brève</th></tr>
+	<tr><th><button>7</button></th><td>A&#x307;</td><th>Point en chef</th></tr>
+	<tr><th><button>8</button></th><td>A&#x308;</td><th>Tréma</th></tr>
+	<tr><th><button>A</button></th><td>A&#x30A;</td><th>Rond en chef</th></tr>
+	<tr><th><button>C</button></th><td>A&#x30C;</td><th>Caron</th></tr>
+	<tr><th><button>27</button></th><td>A&#x327;</td><th>Cédille</th></tr>
+	<tr><th><button>32</button></th><td>A&#x332;</td><th>Trait souscrit</th></tr>
+	<tr><th><button>42</button></th><td>A&#x342;</td><th>Circonflexe grec</th></tr>
 </table>
 </div>
 
