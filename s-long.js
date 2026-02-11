@@ -1,12 +1,3 @@
-function exporterTexte() {
-	blob = new Blob([sortie.innerText], {type: "text/plain"});
-	lien = document.createElement("a");
-	lien.href = URL.createObjectURL(blob);
-	lien.download = "Export.txt";
-	lien.click();
-	URL.revokeObjectURL(lien.href);
-}
-
 function moderniser() {
 	sortie.innerHTML = entrée.value.replace(/ſ/g, "s");
 	document.querySelectorAll("button")[2].style.display = "inline";
