@@ -23,7 +23,7 @@ function fusionner() {
 function lettres() {
 	lettres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	document.querySelectorAll("td").forEach(
-		function (td) {
+		function(td) {
 			td.innerText = lettres[Math.floor(Math.random() * lettres.length)] + td.innerText[1];
 		}
 	)
