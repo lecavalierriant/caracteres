@@ -22,6 +22,6 @@ td:hover {
 .utile {background-color: #00cccc}
 .doublon *:not(button) {border: 2px dashed #cccc00;}
 
-@media (min-width: 910px) {body > div {columns: 2;}}
+@media (min-width: 1000px) {body > div {columns: 2;}}
 
 @media (min-width: 1350px) {body > div {columns: 3;}}
