@@ -6,7 +6,7 @@ copier = (caractère) => {
 
 document.addEventListener(
 	"DOMContentLoaded",
-	function () {
+	function() {
 		éléments = document.querySelectorAll("tr");
 		total = éléments.length;
 		occurrences = {};
