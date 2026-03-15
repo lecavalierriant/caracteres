@@ -131,3 +131,7 @@ chiffres["Mathématique italique sans empattement"] = chiffres["Normal"];
 majuscules["Mathématique italique gras sans empattement"] = ["𝘼", "𝘽", "𝘾", "𝘿", "𝙀", "𝙁", "𝙂", "𝙃", "𝙄", "𝙅", "𝙆", "𝙇", "𝙈", "𝙉", "𝙊", "𝙋", "𝙌", "𝙍", "𝙎", "𝙏", "𝙐", "𝙑", "𝙒", "𝙓", "𝙔", "𝙕"];
 minuscules["Mathématique italique gras sans empattement"] = ["𝙖", "𝙗", "𝙘", "𝙙", "𝙚", "𝙛", "𝙜", "𝙝", "𝙞", "𝙟", "𝙠", "𝙡", "𝙢", "𝙣", "𝙤", "𝙥", "𝙦", "𝙧", "𝙨", "𝙩", "𝙪", "𝙫", "𝙬", "𝙭", "𝙮", "𝙯"];
 chiffres["Mathématique italique gras sans empattement"] = chiffres["Normal"];
+
+majuscules["Vieil italique"] = ["𐌀", "𐌁", "𐌂", "𐌃", "𐌄", "𐌅", "𐌂", "𐌇", "𐌉", "𐌉", "𐌊", "𐌋", "𐌌", "𐌍", "𐌏", "𐌐", "𐌒", "𐌓", "𐌔", "𐌕", "𐌖", "𐌖", "𐌖𐌖", "𐌗", "𐌖", "𐌆"];
+minuscules["Vieil italique"] = majuscules["Vieil italique"];
+chiffres["Vieil italique"] = chiffres["Normal"];
