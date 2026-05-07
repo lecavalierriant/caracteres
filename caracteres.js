@@ -7,7 +7,13 @@ copier = (caractère) => {
 document.addEventListener(
 	"DOMContentLoaded",
 	function() {
-		éléments = document.querySelectorAll("tr");
+		switch (document.title) {
+			case "Tous":
+				éléments = document.querySelectorAll("td");
+				break;
+			default:
+				éléments = document.querySelectorAll("tr");
+		}
 		total = éléments.length;
 		occurrences = {};
 		nombreDeClasses = 0;
@@ -44,4 +50,3 @@ function exporterTexte() {
 	lien.click();
 	URL.revokeObjectURL(lien.href);
 }
-
