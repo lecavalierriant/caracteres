@@ -7,8 +7,25 @@
 	<link rel = "stylesheet" href = "caracteres.css">
 	<link rel = "icon" href = "caracteres.ico">
 	<script src = "caracteres.js"></script>
+	<script>
+		function boutons() {
+			lignes = document.querySelectorAll("tr");
+			lignes.forEach(
+				function (ligne) {
+					cellule = ligne.firstElementChild;
+					if (cellule.innerText == "Alt") {cellule.innerHTML = "<button>Alt</button>";}
+					else if (!isNaN(cellule.innerText)) {
+						aaa = cellule.innerText.split("");
+						bbb = "";
+						for (i = 0; i < aaa.length; i++) {bbb += "<button>" + aaa[i] + "</button>"}
+						cellule.innerHTML = bbb;
+					}
+				}
+			);
+		}
+	</script>
 </head>
-<body>
+<body onload = "boutons()">
 <header><h1><a href = "caracteres.html">Caractères</a></h1></header>
 <iframe src = "caracteres.html"></iframe>
 
@@ -21,1553 +38,523 @@
 
 <div>
 <table>
-	<tr>
-		<th><button>Alt</button></th>
-		<th>Caractère</th>
-	</tr><tr class = "vide">
-		<th><button>0</button></th>
-		<td></td>
-	</tr><tr>
-		<th><button>1</button></th>
-		<td onclick = "copier(this)">☺</td>
-	</tr><tr>
-		<th><button>2</button></th>
-		<td onclick = "copier(this)">☻</td>
-	</tr><tr>
-		<th><button>3</button></th>
-		<td onclick = "copier(this)">♥</td>
-	</tr><tr>
-		<th><button>4</button></th>
-		<td onclick = "copier(this)">♦</td>
-	</tr><tr>
-		<th><button>5</button></th>
-		<td onclick = "copier(this)">♣</td>
-	</tr><tr>
-		<th><button>6</button></th>
-		<td onclick = "copier(this)">♠</td>
-	</tr><tr>
-		<th><button>7</button></th>
-		<td onclick = "copier(this)">•</td>
-	</tr><tr>
-		<th><button>8</button></th>
-		<td onclick = "copier(this)">◘</td>
-	</tr><tr>
-		<th><button>9</button></th>
-		<td onclick = "copier(this)">○</td>
-	</tr><tr>
-		<th><button>1</button><button>0</button></th>
-		<td onclick = "copier(this)">◙</td>
-	</tr><tr>
-		<th><button>1</button><button>1</button></th>
-		<td onclick = "copier(this)">♂</td>
-	</tr><tr>
-		<th><button>1</button><button>2</button></th>
-		<td onclick = "copier(this)">♀</td>
-	</tr><tr>
-		<th><button>1</button><button>3</button></th>
-		<td onclick = "copier(this)">♪</td>
-	</tr><tr>
-		<th><button>1</button><button>4</button></th>
-		<td onclick = "copier(this)">♫</td>
-	</tr><tr>
-		<th><button>1</button><button>5</button></th>
-		<td onclick = "copier(this)">☼</td>
-	</tr><tr>
-		<th><button>1</button><button>6</button></th>
-		<td onclick = "copier(this)">►</td>
-	</tr><tr>
-		<th><button>1</button><button>7</button></th>
-		<td onclick = "copier(this)">◄</td>
-	</tr><tr class = "utile">
-		<th><button>1</button><button>8</button></th>
-		<td onclick = "copier(this)">↕</td>
-	</tr><tr>
-		<th><button>1</button><button>9</button></th>
-		<td onclick = "copier(this)">‼</td>
-	</tr><tr class = "doublon">
-		<th><button>2</button><button>0</button></th>
-		<td onclick = "copier(this)">¶</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>2</button><button>1</button></th>
-		<td onclick = "copier(this)">§</td>
-	</tr><tr>
-		<th><button>2</button><button>2</button></th>
-		<td onclick = "copier(this)">▬</td>
-	</tr><tr>
-		<th><button>2</button><button>3</button></th>
-		<td onclick = "copier(this)">↨</td>
-	</tr><tr class = "utile">
-		<th><button>2</button><button>4</button></th>
-		<td onclick = "copier(this)">↑</td>
-	</tr><tr class = "utile">
-		<th><button>2</button><button>5</button></th>
-		<td onclick = "copier(this)">↓</td>
-	</tr><tr class = "utile">
-		<th><button>2</button><button>6</button></th>
-		<td onclick = "copier(this)">→</td>
-	</tr><tr class = "utile">
-		<th><button>2</button><button>7</button></th>
-		<td onclick = "copier(this)">←</td>
-	</tr><tr>
-		<th><button>2</button><button>8</button></th>
-		<td onclick = "copier(this)">∟</td>
-	</tr><tr class = "utile">
-		<th><button>2</button><button>9</button></th>
-		<td onclick = "copier(this)">↔</td>
-	</tr><tr>
-		<th><button>3</button><button>0</button></th>
-		<td onclick = "copier(this)">▲</td>
-	</tr><tr>
-		<th><button>3</button><button>1</button></th>
-		<td onclick = "copier(this)">▼</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>3</button><button>2</button></th>
-		<td onclick = "copier(this)"> </td>
-	</tr><tr class = "inutile doublon">
-		<th><button>3</button><button>3</button></th>
-		<td onclick = "copier(this)">!</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>3</button><button>4</button></th>
-		<td onclick = "copier(this)">"</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>3</button><button>5</button></th>
-		<td onclick = "copier(this)">#</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>3</button><button>6</button></th>
-		<td onclick = "copier(this)">$</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>3</button><button>7</button></th>
-		<td onclick = "copier(this)">%</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>3</button><button>8</button></th>
-		<td onclick = "copier(this)">&</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>3</button><button>9</button></th>
-		<td onclick = "copier(this)">'</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>4</button><button>0</button></th>
-		<td onclick = "copier(this)">(</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>4</button><button>1</button></th>
-		<td onclick = "copier(this)">)</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>4</button><button>2</button></th>
-		<td onclick = "copier(this)">*</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>4</button><button>3</button></th>
-		<td onclick = "copier(this)">+</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>4</button><button>4</button></th>
-		<td onclick = "copier(this)">,</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>4</button><button>5</button></th>
-		<td onclick = "copier(this)">-</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>4</button><button>6</button></th>
-		<td onclick = "copier(this)">.</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>4</button><button>7</button></th>
-		<td onclick = "copier(this)">/</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>4</button><button>8</button></th>
-		<td onclick = "copier(this)">0</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>4</button><button>9</button></th>
-		<td onclick = "copier(this)">1</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>5</button><button>0</button></th>
-		<td onclick = "copier(this)">2</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>5</button><button>1</button></th>
-		<td onclick = "copier(this)">3</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>5</button><button>2</button></th>
-		<td onclick = "copier(this)">4</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>5</button><button>3</button></th>
-		<td onclick = "copier(this)">5</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>5</button><button>4</button></th>
-		<td onclick = "copier(this)">6</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>5</button><button>5</button></th>
-		<td onclick = "copier(this)">7</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>5</button><button>6</button></th>
-		<td onclick = "copier(this)">8</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>5</button><button>7</button></th>
-		<td onclick = "copier(this)">9</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>5</button><button>8</button></th>
-		<td onclick = "copier(this)">:</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>5</button><button>9</button></th>
-		<td onclick = "copier(this)">;</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>6</button><button>0</button></th>
-		<td onclick = "copier(this)"><</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>6</button><button>1</button></th>
-		<td onclick = "copier(this)">=</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>6</button><button>2</button></th>
-		<td onclick = "copier(this)">></td>
-	</tr><tr class = "inutile doublon">
-		<th><button>6</button><button>3</button></th>
-		<td onclick = "copier(this)">?</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>6</button><button>4</button></th>
-		<td onclick = "copier(this)">@</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>6</button><button>5</button></th>
-		<td onclick = "copier(this)">A</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>6</button><button>6</button></th>
-		<td onclick = "copier(this)">B</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>6</button><button>7</button></th>
-		<td onclick = "copier(this)">C</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>6</button><button>8</button></th>
-		<td onclick = "copier(this)">D</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>6</button><button>9</button></th>
-		<td onclick = "copier(this)">E</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>7</button><button>0</button></th>
-		<td onclick = "copier(this)">F</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>7</button><button>1</button></th>
-		<td onclick = "copier(this)">G</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>7</button><button>2</button></th>
-		<td onclick = "copier(this)">H</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>7</button><button>3</button></th>
-		<td onclick = "copier(this)">I</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>7</button><button>4</button></th>
-		<td onclick = "copier(this)">J</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>7</button><button>5</button></th>
-		<td onclick = "copier(this)">K</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>7</button><button>6</button></th>
-		<td onclick = "copier(this)">L</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>7</button><button>7</button></th>
-		<td onclick = "copier(this)">M</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>7</button><button>8</button></th>
-		<td onclick = "copier(this)">N</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>7</button><button>9</button></th>
-		<td onclick = "copier(this)">O</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>8</button><button>0</button></th>
-		<td onclick = "copier(this)">P</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>8</button><button>1</button></th>
-		<td onclick = "copier(this)">Q</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>8</button><button>2</button></th>
-		<td onclick = "copier(this)">R</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>8</button><button>3</button></th>
-		<td onclick = "copier(this)">S</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>8</button><button>4</button></th>
-		<td onclick = "copier(this)">T</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>8</button><button>5</button></th>
-		<td onclick = "copier(this)">U</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>8</button><button>6</button></th>
-		<td onclick = "copier(this)">V</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>8</button><button>7</button></th>
-		<td onclick = "copier(this)">W</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>8</button><button>8</button></th>
-		<td onclick = "copier(this)">X</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>8</button><button>9</button></th>
-		<td onclick = "copier(this)">Y</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>9</button><button>0</button></th>
-		<td onclick = "copier(this)">Z</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>9</button><button>1</button></th>
-		<td onclick = "copier(this)">[</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>9</button><button>2</button></th>
-		<td onclick = "copier(this)">\</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>9</button><button>3</button></th>
-		<td onclick = "copier(this)">]</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>9</button><button>4</button></th>
-		<td onclick = "copier(this)">^</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>9</button><button>5</button></th>
-		<td onclick = "copier(this)">_</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>9</button><button>6</button></th>
-		<td onclick = "copier(this)">`</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>9</button><button>7</button></th>
-		<td onclick = "copier(this)">a</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>9</button><button>8</button></th>
-		<td onclick = "copier(this)">b</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>9</button><button>9</button></th>
-		<td onclick = "copier(this)">c</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>0</button><button>0</button></th>
-		<td onclick = "copier(this)">d</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>0</button><button>1</button></th>
-		<td onclick = "copier(this)">e</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>0</button><button>2</button></th>
-		<td onclick = "copier(this)">f</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>0</button><button>3</button></th>
-		<td onclick = "copier(this)">g</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>0</button><button>4</button></th>
-		<td onclick = "copier(this)">h</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>0</button><button>5</button></th>
-		<td onclick = "copier(this)">i</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>0</button><button>6</button></th>
-		<td onclick = "copier(this)">j</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>0</button><button>7</button></th>
-		<td onclick = "copier(this)">k</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>0</button><button>8</button></th>
-		<td onclick = "copier(this)">l</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>0</button><button>9</button></th>
-		<td onclick = "copier(this)">m</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>1</button><button>0</button></th>
-		<td onclick = "copier(this)">n</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>1</button><button>1</button></th>
-		<td onclick = "copier(this)">o</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>1</button><button>2</button></th>
-		<td onclick = "copier(this)">p</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>1</button><button>3</button></th>
-		<td onclick = "copier(this)">q</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>1</button><button>4</button></th>
-		<td onclick = "copier(this)">r</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>1</button><button>5</button></th>
-		<td onclick = "copier(this)">s</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>1</button><button>6</button></th>
-		<td onclick = "copier(this)">t</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>1</button><button>7</button></th>
-		<td onclick = "copier(this)">u</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>1</button><button>8</button></th>
-		<td onclick = "copier(this)">v</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>1</button><button>9</button></th>
-		<td onclick = "copier(this)">w</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>2</button><button>0</button></th>
-		<td onclick = "copier(this)">x</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>2</button><button>1</button></th>
-		<td onclick = "copier(this)">y</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>2</button><button>2</button></th>
-		<td onclick = "copier(this)">z</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>2</button><button>3</button></th>
-		<td onclick = "copier(this)">{</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>2</button><button>4</button></th>
-		<td onclick = "copier(this)">|</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>2</button><button>5</button></th>
-		<td onclick = "copier(this)">}</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>2</button><button>6</button></th>
-		<td onclick = "copier(this)">~</td>
-	</tr><tr>
-		<th><button>1</button><button>2</button><button>7</button></th>
-		<td onclick = "copier(this)">⌂</td>
-	</tr><tr class = "utile doublon">
-		<th><button>1</button><button>2</button><button>8</button></th>
-		<td onclick = "copier(this)">Ç</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>2</button><button>9</button></th>
-		<td onclick = "copier(this)">ü</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>3</button><button>0</button></th>
-		<td onclick = "copier(this)">é</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>3</button><button>1</button></th>
-		<td onclick = "copier(this)">â</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>3</button><button>2</button></th>
-		<td onclick = "copier(this)">ä</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>3</button><button>3</button></th>
-		<td onclick = "copier(this)">à</td>
-	</tr><tr class = "doublon">
-		<th><button>1</button><button>3</button><button>4</button></th>
-		<td onclick = "copier(this)">å</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>3</button><button>5</button></th>
-		<td onclick = "copier(this)">ç</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>3</button><button>6</button></th>
-		<td onclick = "copier(this)">ê</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>3</button><button>7</button></th>
-		<td onclick = "copier(this)">ë</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>3</button><button>8</button></th>
-		<td onclick = "copier(this)">è</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>3</button><button>9</button></th>
-		<td onclick = "copier(this)">ï</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>4</button><button>0</button></th>
-		<td onclick = "copier(this)">î</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>4</button><button>1</button></th>
-		<td onclick = "copier(this)">ì</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>4</button><button>2</button></th>
-		<td onclick = "copier(this)">Ä</td>
-	</tr><tr class = "doublon">
-		<th><button>1</button><button>4</button><button>3</button></th>
-		<td onclick = "copier(this)">Å</td>
-	</tr><tr class = "utile doublon">
-		<th><button>1</button><button>4</button><button>4</button></th>
-		<td onclick = "copier(this)">É</td>
-	</tr><tr class = "utile doublon">
-		<th><button>1</button><button>4</button><button>5</button></th>
-		<td onclick = "copier(this)">æ</td>
-	</tr><tr class = "utile doublon">
-		<th><button>1</button><button>4</button><button>6</button></th>
-		<td onclick = "copier(this)">Æ</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>4</button><button>7</button></th>
-		<td onclick = "copier(this)">ô</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>4</button><button>8</button></th>
-		<td onclick = "copier(this)">ö</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>4</button><button>9</button></th>
-		<td onclick = "copier(this)">ò</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>5</button><button>0</button></th>
-		<td onclick = "copier(this)">û</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>5</button><button>1</button></th>
-		<td onclick = "copier(this)">ù</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>5</button><button>2</button></th>
-		<td onclick = "copier(this)">ÿ</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>5</button><button>3</button></th>
-		<td onclick = "copier(this)">Ö</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>5</button><button>4</button></th>
-		<td onclick = "copier(this)">Ü</td>
-	</tr><tr class = "doublon">
-		<th><button>1</button><button>5</button><button>5</button></th>
-		<td onclick = "copier(this)">ø</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>5</button><button>6</button></th>
-		<td onclick = "copier(this)">£</td>
-	</tr><tr class = "doublon">
-		<th><button>1</button><button>5</button><button>7</button></th>
-		<td onclick = "copier(this)">Ø</td>
-	</tr><tr class = "utile doublon">
-		<th><button>1</button><button>5</button><button>8</button></th>
-		<td onclick = "copier(this)">×</td>
-	</tr><tr class = "doublon">
-		<th><button>1</button><button>5</button><button>9</button></th>
-		<td onclick = "copier(this)">ƒ</td>
-	</tr><tr class = "doublon">
-		<th><button>1</button><button>6</button><button>0</button></th>
-		<td onclick = "copier(this)">á</td>
-	</tr><tr class = "doublon">
-		<th><button>1</button><button>6</button><button>1</button></th>
-		<td onclick = "copier(this)">í</td>
-	</tr><tr class = "doublon">
-		<th><button>1</button><button>6</button><button>2</button></th>
-		<td onclick = "copier(this)">ó</td>
-	</tr><tr class = "doublon">
-		<th><button>1</button><button>6</button><button>3</button></th>
-		<td onclick = "copier(this)">ú</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>6</button><button>4</button></th>
-		<td onclick = "copier(this)">ñ</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>6</button><button>5</button></th>
-		<td onclick = "copier(this)">Ñ</td>
-	</tr><tr class = "doublon">
-		<th><button>1</button><button>6</button><button>6</button></th>
-		<td onclick = "copier(this)">ª</td>
-	</tr><tr class = "doublon">
-		<th><button>1</button><button>6</button><button>7</button></th>
-		<td onclick = "copier(this)">º</td>
-	</tr><tr class = "doublon">
-		<th><button>1</button><button>6</button><button>8</button></th>
-		<td onclick = "copier(this)">¿</td>
-	</tr><tr class = "utile doublon">
-		<th><button>1</button><button>6</button><button>9</button></th>
-		<td onclick = "copier(this)">®</td>
-	</tr><tr class = "doublon">
-		<th><button>1</button><button>7</button><button>0</button></th>
-		<td onclick = "copier(this)">¬</td>
-	</tr><tr class = "utile doublon">
-		<th><button>1</button><button>7</button><button>1</button></th>
-		<td onclick = "copier(this)">½</td>
-	</tr><tr class = "utile doublon">
-		<th><button>1</button><button>7</button><button>2</button></th>
-		<td onclick = "copier(this)">¼</td>
-	</tr><tr class = "doublon">
-		<th><button>1</button><button>7</button><button>3</button></th>
-		<td onclick = "copier(this)">¡</td>
-	</tr><tr class = "utile doublon">
-		<th><button>1</button><button>7</button><button>4</button></th>
-		<td onclick = "copier(this)">«</td>
-	</tr><tr class = "utile doublon">
-		<th><button>1</button><button>7</button><button>5</button></th>
-		<td onclick = "copier(this)">»</td>
-	</tr><tr>
-		<th><button>1</button><button>7</button><button>6</button></th>
-		<td onclick = "copier(this)">░</td>
-	</tr><tr>
-		<th><button>1</button><button>7</button><button>7</button></th>
-		<td onclick = "copier(this)">▒</td>
-	</tr><tr>
-		<th><button>1</button><button>7</button><button>8</button></th>
-		<td onclick = "copier(this)">▓</td>
-	</tr><tr>
-		<th><button>1</button><button>7</button><button>9</button></th>
-		<td onclick = "copier(this)">│</td>
-	</tr><tr>
-		<th><button>1</button><button>8</button><button>0</button></th>
-		<td onclick = "copier(this)">┤</td>
-	</tr><tr class = "doublon">
-		<th><button>1</button><button>8</button><button>1</button></th>
-		<td onclick = "copier(this)">Á</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>8</button><button>2</button></th>
-		<td onclick = "copier(this)">Â</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>8</button><button>3</button></th>
-		<td onclick = "copier(this)">À</td>
-	</tr><tr class = "utile doublon">
-		<th><button>1</button><button>8</button><button>4</button></th>
-		<td onclick = "copier(this)">©</td>
-	</tr><tr>
-		<th><button>1</button><button>8</button><button>5</button></th>
-		<td onclick = "copier(this)">╣</td>
-	</tr><tr>
-		<th><button>1</button><button>8</button><button>6</button></th>
-		<td onclick = "copier(this)">║</td>
-	</tr><tr>
-		<th><button>1</button><button>8</button><button>7</button></th>
-		<td onclick = "copier(this)">╗</td>
-	</tr><tr>
-		<th><button>1</button><button>8</button><button>8</button></th>
-		<td onclick = "copier(this)">╝</td>
-	</tr><tr class = "doublon">
-		<th><button>1</button><button>8</button><button>9</button></th>
-		<td onclick = "copier(this)">¢</td>
-	</tr><tr class = "doublon">
-		<th><button>1</button><button>9</button><button>0</button></th>
-		<td onclick = "copier(this)">¥</td>
-	</tr><tr>
-		<th><button>1</button><button>9</button><button>1</button></th>
-		<td onclick = "copier(this)">┐</td>
-	</tr><tr>
-		<th><button>1</button><button>9</button><button>2</button></th>
-		<td onclick = "copier(this)">└</td>
-	</tr><tr>
-		<th><button>1</button><button>9</button><button>3</button></th>
-		<td onclick = "copier(this)">┴</td>
-	</tr><tr>
-		<th><button>1</button><button>9</button><button>4</button></th>
-		<td onclick = "copier(this)">┬</td>
-	</tr><tr>
-		<th><button>1</button><button>9</button><button>5</button></th>
-		<td onclick = "copier(this)">├</td>
-	</tr><tr>
-		<th><button>1</button><button>9</button><button>6</button></th>
-		<td onclick = "copier(this)">─</td>
-	</tr><tr>
-		<th><button>1</button><button>9</button><button>7</button></th>
-		<td onclick = "copier(this)">┼</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>9</button><button>8</button></th>
-		<td onclick = "copier(this)">ã</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>1</button><button>9</button><button>9</button></th>
-		<td onclick = "copier(this)">Ã</td>
-	</tr><tr>
-		<th><button>2</button><button>0</button><button>0</button></th>
-		<td onclick = "copier(this)">╚</td>
-	</tr><tr>
-		<th><button>2</button><button>0</button><button>1</button></th>
-		<td onclick = "copier(this)">╔</td>
-	</tr><tr>
-		<th><button>2</button><button>0</button><button>2</button></th>
-		<td onclick = "copier(this)">╩</td>
-	</tr><tr>
-		<th><button>2</button><button>0</button><button>3</button></th>
-		<td onclick = "copier(this)">╦</td>
-	</tr><tr>
-		<th><button>2</button><button>0</button><button>4</button></th>
-		<td onclick = "copier(this)">╠</td>
-	</tr><tr>
-		<th><button>2</button><button>0</button><button>5</button></th>
-		<td onclick = "copier(this)">═</td>
-	</tr><tr>
-		<th><button>2</button><button>0</button><button>6</button></th>
-		<td onclick = "copier(this)">╬</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>2</button><button>0</button><button>7</button></th>
-		<td onclick = "copier(this)">¤</td>
-	</tr><tr class = "doublon">
-		<th><button>2</button><button>0</button><button>8</button></th>
-		<td onclick = "copier(this)">ð</td>
-	</tr><tr class = "doublon">
-		<th><button>2</button><button>0</button><button>9</button></th>
-		<td onclick = "copier(this)">Ð</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>2</button><button>1</button><button>0</button></th>
-		<td onclick = "copier(this)">Ê</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>2</button><button>1</button><button>1</button></th>
-		<td onclick = "copier(this)">Ë</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>2</button><button>1</button><button>2</button></th>
-		<td onclick = "copier(this)">È</td>
-	</tr><tr>
-		<th><button>2</button><button>1</button><button>3</button></th>
-		<td onclick = "copier(this)">ı</td>
-	</tr><tr class = "doublon">
-		<th><button>2</button><button>1</button><button>4</button></th>
-		<td onclick = "copier(this)">Í</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>2</button><button>1</button><button>5</button></th>
-		<td onclick = "copier(this)">Î</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>2</button><button>1</button><button>6</button></th>
-		<td onclick = "copier(this)">Ï</td>
-	</tr><tr>
-		<th><button>2</button><button>1</button><button>7</button></th>
-		<td onclick = "copier(this)">┘</td>
-	</tr><tr>
-		<th><button>2</button><button>1</button><button>8</button></th>
-		<td onclick = "copier(this)">┌</td>
-	</tr><tr>
-		<th><button>2</button><button>1</button><button>9</button></th>
-		<td onclick = "copier(this)">█</td>
-	</tr><tr>
-		<th><button>2</button><button>2</button><button>0</button></th>
-		<td onclick = "copier(this)">▄</td>
-	</tr><tr class = "doublon">
-		<th><button>2</button><button>2</button><button>1</button></th>
-		<td onclick = "copier(this)">¦</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>2</button><button>2</button><button>2</button></th>
-		<td onclick = "copier(this)">Ì</td>
-	</tr><tr>
-		<th><button>2</button><button>2</button><button>3</button></th>
-		<td onclick = "copier(this)">▀</td>
-	</tr><tr class = "doublon">
-		<th><button>2</button><button>2</button><button>4</button></th>
-		<td onclick = "copier(this)">Ó</td>
-	</tr><tr class = "doublon">
-		<th><button>2</button><button>2</button><button>5</button></th>
-		<td onclick = "copier(this)">ß</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>2</button><button>2</button><button>6</button></th>
-		<td onclick = "copier(this)">Ô</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>2</button><button>2</button><button>7</button></th>
-		<td onclick = "copier(this)">Ò</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>2</button><button>2</button><button>8</button></th>
-		<td onclick = "copier(this)">õ</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>2</button><button>2</button><button>9</button></th>
-		<td onclick = "copier(this)">Õ</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>2</button><button>3</button><button>0</button></th>
-		<td onclick = "copier(this)">µ</td>
-	</tr><tr class = "doublon">
-		<th><button>2</button><button>3</button><button>1</button></th>
-		<td onclick = "copier(this)">þ</td>
-	</tr><tr class = "doublon">
-		<th><button>2</button><button>3</button><button>2</button></th>
-		<td onclick = "copier(this)">Þ</td>
-	</tr><tr class = "doublon">
-		<th><button>2</button><button>3</button><button>3</button></th>
-		<td onclick = "copier(this)">Ú</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>2</button><button>3</button><button>4</button></th>
-		<td onclick = "copier(this)">Û</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>2</button><button>3</button><button>5</button></th>
-		<td onclick = "copier(this)">Ù</td>
-	</tr><tr class = "doublon">
-		<th><button>2</button><button>3</button><button>6</button></th>
-		<td onclick = "copier(this)">ý</td>
-	</tr><tr class = "doublon">
-		<th><button>2</button><button>3</button><button>7</button></th>
-		<td onclick = "copier(this)">Ý</td>
-	</tr><tr class = "doublon">
-		<th><button>2</button><button>3</button><button>8</button></th>
-		<td onclick = "copier(this)">¯</td>
-	</tr><tr class = "doublon">
-		<th><button>2</button><button>3</button><button>9</button></th>
-		<td onclick = "copier(this)">´</td>
-	</tr><tr class = "doublon">
-		<th><button>2</button><button>4</button><button>0</button></th>
-		<td onclick = "copier(this)">­</td>
-	</tr><tr class = "utile doublon">
-		<th><button>2</button><button>4</button><button>1</button></th>
-		<td onclick = "copier(this)">±</td>
-	</tr><tr>
-		<th><button>2</button><button>4</button><button>2</button></th>
-		<td onclick = "copier(this)">‗</td>
-	</tr><tr class = "utile doublon">
-		<th><button>2</button><button>4</button><button>3</button></th>
-		<td onclick = "copier(this)">¾</td>
-	</tr><tr class = "doublon">
-		<th><button>2</button><button>4</button><button>4</button></th>
-		<td onclick = "copier(this)">¶</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>2</button><button>4</button><button>5</button></th>
-		<td onclick = "copier(this)">§</td>
-	</tr><tr class = "utile doublon">
-		<th><button>2</button><button>4</button><button>6</button></th>
-		<td onclick = "copier(this)">÷</td>
-	</tr><tr class = "doublon">
-		<th><button>2</button><button>4</button><button>7</button></th>
-		<td onclick = "copier(this)">¸</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>2</button><button>4</button><button>8</button></th>
-		<td onclick = "copier(this)">°</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>2</button><button>4</button><button>9</button></th>
-		<td onclick = "copier(this)">¨</td>
-	</tr><tr class = "doublon">
-		<th><button>2</button><button>5</button><button>0</button></th>
-		<td onclick = "copier(this)">·</td>
-	</tr><tr class = "utile doublon">
-		<th><button>2</button><button>5</button><button>1</button></th>
-		<td onclick = "copier(this)">¹</td>
-	</tr><tr class = "utile doublon">
-		<th><button>2</button><button>5</button><button>2</button></th>
-		<td onclick = "copier(this)">³</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>2</button><button>5</button><button>3</button></th>
-		<td onclick = "copier(this)">²</td>
-	</tr><tr>
-		<th><button>2</button><button>5</button><button>4</button></th>
-		<td onclick = "copier(this)">■</td>
-	</tr><tr class = "utile doublon">
-		<th><button>2</button><button>5</button><button>5</button></th>
-		<td onclick = "copier(this)"> </td>
-	</tr>
+	<tr><th>Alt</th><th>Caractère</th></tr>
+	<tr class = "vide"><th>0</th><td></td></tr>
+	<tr><th>1</th><td onclick = "copier(this)">☺</td></tr>
+	<tr><th>2</th><td onclick = "copier(this)">☻</td></tr>
+	<tr><th>3</th><td onclick = "copier(this)">♥</td></tr>
+	<tr><th>4</th><td onclick = "copier(this)">♦</td></tr>
+	<tr><th>5</th><td onclick = "copier(this)">♣</td></tr>
+	<tr><th>6</th><td onclick = "copier(this)">♠</td></tr>
+	<tr><th>7</th><td onclick = "copier(this)">•</td></tr>
+	<tr><th>8</th><td onclick = "copier(this)">◘</td></tr>
+	<tr><th>9</th><td onclick = "copier(this)">○</td></tr>
+	<tr><th>10</th><td onclick = "copier(this)">◙</td></tr>
+	<tr><th>11</th><td onclick = "copier(this)">♂</td></tr>
+	<tr><th>12</th><td onclick = "copier(this)">♀</td></tr>
+	<tr><th>13</th><td onclick = "copier(this)">♪</td></tr>
+	<tr><th>14</th><td onclick = "copier(this)">♫</td></tr>
+	<tr><th>15</th><td onclick = "copier(this)">☼</td></tr>
+	<tr><th>16</th><td onclick = "copier(this)">►</td></tr>
+	<tr><th>17</th><td onclick = "copier(this)">◄</td></tr>
+	<tr class = "utile"><th>18</th><td onclick = "copier(this)">↕</td></tr>
+	<tr><th>19</th><td onclick = "copier(this)">‼</td></tr>
+	<tr class = "doublon"><th>20</th><td onclick = "copier(this)">¶</td></tr>
+	<tr class = "inutile doublon"><th>21</th><td onclick = "copier(this)">§</td></tr>
+	<tr><th>22</th><td onclick = "copier(this)">▬</td></tr>
+	<tr><th>23</th><td onclick = "copier(this)">↨</td></tr>
+	<tr class = "utile"><th>24</th><td onclick = "copier(this)">↑</td></tr>
+	<tr class = "utile"><th>25</th><td onclick = "copier(this)">↓</td></tr>
+	<tr class = "utile"><th>26</th><td onclick = "copier(this)">→</td></tr>
+	<tr class = "utile"><th>27</th><td onclick = "copier(this)">←</td></tr>
+	<tr><th>28</th><td onclick = "copier(this)">∟</td></tr>
+	<tr class = "utile"><th>29</th><td onclick = "copier(this)">↔</td></tr>
+	<tr><th>30</th><td onclick = "copier(this)">▲</td></tr>
+	<tr><th>31</th><td onclick = "copier(this)">▼</td></tr>
+	<tr class = "inutile doublon"><th>32</th><td onclick = "copier(this)"> </td></tr>
+	<tr class = "inutile doublon"><th>33</th><td onclick = "copier(this)">!</td></tr>
+	<tr class = "inutile doublon"><th>34</th><td onclick = "copier(this)">"</td></tr>
+	<tr class = "inutile doublon"><th>35</th><td onclick = "copier(this)">#</td></tr>
+	<tr class = "inutile doublon"><th>36</th><td onclick = "copier(this)">$</td></tr>
+	<tr class = "inutile doublon"><th>37</th><td onclick = "copier(this)">%</td></tr>
+	<tr class = "inutile doublon"><th>38</th><td onclick = "copier(this)">&</td></tr>
+	<tr class = "inutile doublon"><th>39</th><td onclick = "copier(this)">'</td></tr>
+	<tr class = "inutile doublon"><th>40</th><td onclick = "copier(this)">(</td></tr>
+	<tr class = "inutile doublon"><th>41</th><td onclick = "copier(this)">)</td></tr>
+	<tr class = "inutile doublon"><th>42</th><td onclick = "copier(this)">*</td></tr>
+	<tr class = "inutile doublon"><th>43</th><td onclick = "copier(this)">+</td></tr>
+	<tr class = "inutile doublon"><th>44</th><td onclick = "copier(this)">,</td></tr>
+	<tr class = "inutile doublon"><th>45</th><td onclick = "copier(this)">-</td></tr>
+	<tr class = "inutile doublon"><th>46</th><td onclick = "copier(this)">.</td></tr>
+	<tr class = "inutile doublon"><th>47</th><td onclick = "copier(this)">/</td></tr>
+	<tr class = "inutile doublon"><th>48</th><td onclick = "copier(this)">0</td></tr>
+	<tr class = "inutile doublon"><th>49</th><td onclick = "copier(this)">1</td></tr>
+	<tr class = "inutile doublon"><th>50</th><td onclick = "copier(this)">2</td></tr>
+	<tr class = "inutile doublon"><th>51</th><td onclick = "copier(this)">3</td></tr>
+	<tr class = "inutile doublon"><th>52</th><td onclick = "copier(this)">4</td></tr>
+	<tr class = "inutile doublon"><th>53</th><td onclick = "copier(this)">5</td></tr>
+	<tr class = "inutile doublon"><th>54</th><td onclick = "copier(this)">6</td></tr>
+	<tr class = "inutile doublon"><th>55</th><td onclick = "copier(this)">7</td></tr>
+	<tr class = "inutile doublon"><th>56</th><td onclick = "copier(this)">8</td></tr>
+	<tr class = "inutile doublon"><th>57</th><td onclick = "copier(this)">9</td></tr>
+	<tr class = "inutile doublon"><th>58</th><td onclick = "copier(this)">:</td></tr>
+	<tr class = "inutile doublon"><th>59</th><td onclick = "copier(this)">;</td></tr>
+	<tr class = "inutile doublon"><th>60</th><td onclick = "copier(this)"><</td></tr>
+	<tr class = "inutile doublon"><th>61</th><td onclick = "copier(this)">=</td></tr>
+	<tr class = "inutile doublon"><th>62</th><td onclick = "copier(this)">></td></tr>
+	<tr class = "inutile doublon"><th>63</th><td onclick = "copier(this)">?</td></tr>
+	<tr class = "inutile doublon"><th>64</th><td onclick = "copier(this)">@</td></tr>
+	<tr class = "inutile doublon"><th>65</th><td onclick = "copier(this)">A</td></tr>
+	<tr class = "inutile doublon"><th>66</th><td onclick = "copier(this)">B</td></tr>
+	<tr class = "inutile doublon"><th>67</th><td onclick = "copier(this)">C</td></tr>
+	<tr class = "inutile doublon"><th>68</th><td onclick = "copier(this)">D</td></tr>
+	<tr class = "inutile doublon"><th>69</th><td onclick = "copier(this)">E</td></tr>
+	<tr class = "inutile doublon"><th>70</th><td onclick = "copier(this)">F</td></tr>
+	<tr class = "inutile doublon"><th>71</th><td onclick = "copier(this)">G</td></tr>
+	<tr class = "inutile doublon"><th>72</th><td onclick = "copier(this)">H</td></tr>
+	<tr class = "inutile doublon"><th>73</th><td onclick = "copier(this)">I</td></tr>
+	<tr class = "inutile doublon"><th>74</th><td onclick = "copier(this)">J</td></tr>
+	<tr class = "inutile doublon"><th>75</th><td onclick = "copier(this)">K</td></tr>
+	<tr class = "inutile doublon"><th>76</th><td onclick = "copier(this)">L</td></tr>
+	<tr class = "inutile doublon"><th>77</th><td onclick = "copier(this)">M</td></tr>
+	<tr class = "inutile doublon"><th>78</th><td onclick = "copier(this)">N</td></tr>
+	<tr class = "inutile doublon"><th>79</th><td onclick = "copier(this)">O</td></tr>
+	<tr class = "inutile doublon"><th>80</th><td onclick = "copier(this)">P</td></tr>
+	<tr class = "inutile doublon"><th>81</th><td onclick = "copier(this)">Q</td></tr>
+	<tr class = "inutile doublon"><th>82</th><td onclick = "copier(this)">R</td></tr>
+	<tr class = "inutile doublon"><th>83</th><td onclick = "copier(this)">S</td></tr>
+	<tr class = "inutile doublon"><th>84</th><td onclick = "copier(this)">T</td></tr>
+	<tr class = "inutile doublon"><th>85</th><td onclick = "copier(this)">U</td></tr>
+	<tr class = "inutile doublon"><th>86</th><td onclick = "copier(this)">V</td></tr>
+	<tr class = "inutile doublon"><th>87</th><td onclick = "copier(this)">W</td></tr>
+	<tr class = "inutile doublon"><th>88</th><td onclick = "copier(this)">X</td></tr>
+	<tr class = "inutile doublon"><th>89</th><td onclick = "copier(this)">Y</td></tr>
+	<tr class = "inutile doublon"><th>90</th><td onclick = "copier(this)">Z</td></tr>
+	<tr class = "inutile doublon"><th>91</th><td onclick = "copier(this)">[</td></tr>
+	<tr class = "inutile doublon"><th>92</th><td onclick = "copier(this)">\</td></tr>
+	<tr class = "inutile doublon"><th>93</th><td onclick = "copier(this)">]</td></tr>
+	<tr class = "inutile doublon"><th>94</th><td onclick = "copier(this)">^</td></tr>
+	<tr class = "inutile doublon"><th>95</th><td onclick = "copier(this)">_</td></tr>
+	<tr class = "inutile doublon"><th>96</th><td onclick = "copier(this)">`</td></tr>
+	<tr class = "inutile doublon"><th>97</th><td onclick = "copier(this)">a</td></tr>
+	<tr class = "inutile doublon"><th>98</th><td onclick = "copier(this)">b</td></tr>
+	<tr class = "inutile doublon"><th>99</th><td onclick = "copier(this)">c</td></tr>
+	<tr class = "inutile doublon"><th>100</th><td onclick = "copier(this)">d</td></tr>
+	<tr class = "inutile doublon"><th>101</th><td onclick = "copier(this)">e</td></tr>
+	<tr class = "inutile doublon"><th>102</th><td onclick = "copier(this)">f</td></tr>
+	<tr class = "inutile doublon"><th>103</th><td onclick = "copier(this)">g</td></tr>
+	<tr class = "inutile doublon"><th>104</th><td onclick = "copier(this)">h</td></tr>
+	<tr class = "inutile doublon"><th>105</th><td onclick = "copier(this)">i</td></tr>
+	<tr class = "inutile doublon"><th>106</th><td onclick = "copier(this)">j</td></tr>
+	<tr class = "inutile doublon"><th>107</th><td onclick = "copier(this)">k</td></tr>
+	<tr class = "inutile doublon"><th>108</th><td onclick = "copier(this)">l</td></tr>
+	<tr class = "inutile doublon"><th>109</th><td onclick = "copier(this)">m</td></tr>
+	<tr class = "inutile doublon"><th>110</th><td onclick = "copier(this)">n</td></tr>
+	<tr class = "inutile doublon"><th>111</th><td onclick = "copier(this)">o</td></tr>
+	<tr class = "inutile doublon"><th>112</th><td onclick = "copier(this)">p</td></tr>
+	<tr class = "inutile doublon"><th>113</th><td onclick = "copier(this)">q</td></tr>
+	<tr class = "inutile doublon"><th>114</th><td onclick = "copier(this)">r</td></tr>
+	<tr class = "inutile doublon"><th>115</th><td onclick = "copier(this)">s</td></tr>
+	<tr class = "inutile doublon"><th>116</th><td onclick = "copier(this)">t</td></tr>
+	<tr class = "inutile doublon"><th>117</th><td onclick = "copier(this)">u</td></tr>
+	<tr class = "inutile doublon"><th>118</th><td onclick = "copier(this)">v</td></tr>
+	<tr class = "inutile doublon"><th>119</th><td onclick = "copier(this)">w</td></tr>
+	<tr class = "inutile doublon"><th>120</th><td onclick = "copier(this)">x</td></tr>
+	<tr class = "inutile doublon"><th>121</th><td onclick = "copier(this)">y</td></tr>
+	<tr class = "inutile doublon"><th>122</th><td onclick = "copier(this)">z</td></tr>
+	<tr class = "inutile doublon"><th>123</th><td onclick = "copier(this)">{</td></tr>
+	<tr class = "inutile doublon"><th>124</th><td onclick = "copier(this)">|</td></tr>
+	<tr class = "inutile doublon"><th>125</th><td onclick = "copier(this)">}</td></tr>
+	<tr class = "inutile doublon"><th>126</th><td onclick = "copier(this)">~</td></tr>
+	<tr><th>127</th><td onclick = "copier(this)">⌂</td></tr>
+	<tr class = "utile doublon"><th>128</th><td onclick = "copier(this)">Ç</td></tr>
+	<tr class = "inutile doublon"><th>129</th><td onclick = "copier(this)">ü</td></tr>
+	<tr class = "inutile doublon"><th>130</th><td onclick = "copier(this)">é</td></tr>
+	<tr class = "inutile doublon"><th>131</th><td onclick = "copier(this)">â</td></tr>
+	<tr class = "inutile doublon"><th>132</th><td onclick = "copier(this)">ä</td></tr>
+	<tr class = "inutile doublon"><th>133</th><td onclick = "copier(this)">à</td></tr>
+	<tr class = "doublon"><th>134</th><td onclick = "copier(this)">å</td></tr>
+	<tr class = "inutile doublon"><th>135</th><td onclick = "copier(this)">ç</td></tr>
+	<tr class = "inutile doublon"><th>136</th><td onclick = "copier(this)">ê</td></tr>
+	<tr class = "inutile doublon"><th>137</th><td onclick = "copier(this)">ë</td></tr>
+	<tr class = "inutile doublon"><th>138</th><td onclick = "copier(this)">è</td></tr>
+	<tr class = "inutile doublon"><th>139</th><td onclick = "copier(this)">ï</td></tr>
+	<tr class = "inutile doublon"><th>140</th><td onclick = "copier(this)">î</td></tr>
+	<tr class = "inutile doublon"><th>141</th><td onclick = "copier(this)">ì</td></tr>
+	<tr class = "inutile doublon"><th>142</th><td onclick = "copier(this)">Ä</td></tr>
+	<tr class = "doublon"><th>143</th><td onclick = "copier(this)">Å</td></tr>
+	<tr class = "utile doublon"><th>144</th><td onclick = "copier(this)">É</td></tr>
+	<tr class = "utile doublon"><th>145</th><td onclick = "copier(this)">æ</td></tr>
+	<tr class = "utile doublon"><th>146</th><td onclick = "copier(this)">Æ</td></tr>
+	<tr class = "inutile doublon"><th>147</th><td onclick = "copier(this)">ô</td></tr>
+	<tr class = "inutile doublon"><th>148</th><td onclick = "copier(this)">ö</td></tr>
+	<tr class = "inutile doublon"><th>149</th><td onclick = "copier(this)">ò</td></tr>
+	<tr class = "inutile doublon"><th>150</th><td onclick = "copier(this)">û</td></tr>
+	<tr class = "inutile doublon"><th>151</th><td onclick = "copier(this)">ù</td></tr>
+	<tr class = "inutile doublon"><th>152</th><td onclick = "copier(this)">ÿ</td></tr>
+	<tr class = "inutile doublon"><th>153</th><td onclick = "copier(this)">Ö</td></tr>
+	<tr class = "inutile doublon"><th>154</th><td onclick = "copier(this)">Ü</td></tr>
+	<tr class = "doublon"><th>155</th><td onclick = "copier(this)">ø</td></tr>
+	<tr class = "inutile doublon"><th>156</th><td onclick = "copier(this)">£</td></tr>
+	<tr class = "doublon"><th>157</th><td onclick = "copier(this)">Ø</td></tr>
+	<tr class = "utile doublon"><th>158</th><td onclick = "copier(this)">×</td></tr>
+	<tr class = "doublon"><th>159</th><td onclick = "copier(this)">ƒ</td></tr>
+	<tr class = "doublon"><th>160</th><td onclick = "copier(this)">á</td></tr>
+	<tr class = "doublon"><th>161</th><td onclick = "copier(this)">í</td></tr>
+	<tr class = "doublon"><th>162</th><td onclick = "copier(this)">ó</td></tr>
+	<tr class = "doublon"><th>163</th><td onclick = "copier(this)">ú</td></tr>
+	<tr class = "inutile doublon"><th>164</th><td onclick = "copier(this)">ñ</td></tr>
+	<tr class = "inutile doublon"><th>165</th><td onclick = "copier(this)">Ñ</td></tr>
+	<tr class = "doublon"><th>166</th><td onclick = "copier(this)">ª</td></tr>
+	<tr class = "doublon"><th>167</th><td onclick = "copier(this)">º</td></tr>
+	<tr class = "doublon"><th>168</th><td onclick = "copier(this)">¿</td></tr>
+	<tr class = "utile doublon"><th>169</th><td onclick = "copier(this)">®</td></tr>
+	<tr class = "doublon"><th>170</th><td onclick = "copier(this)">¬</td></tr>
+	<tr class = "utile doublon"><th>171</th><td onclick = "copier(this)">½</td></tr>
+	<tr class = "utile doublon"><th>172</th><td onclick = "copier(this)">¼</td></tr>
+	<tr class = "doublon"><th>173</th><td onclick = "copier(this)">¡</td></tr>
+	<tr class = "utile doublon"><th>174</th><td onclick = "copier(this)">«</td></tr>
+	<tr class = "utile doublon"><th>175</th><td onclick = "copier(this)">»</td></tr>
+	<tr><th>176</th><td onclick = "copier(this)">░</td></tr>
+	<tr><th>177</th><td onclick = "copier(this)">▒</td></tr>
+	<tr><th>178</th><td onclick = "copier(this)">▓</td></tr>
+	<tr><th>179</th><td onclick = "copier(this)">│</td></tr>
+	<tr><th>180</th><td onclick = "copier(this)">┤</td></tr>
+	<tr class = "doublon"><th>181</th><td onclick = "copier(this)">Á</td></tr>
+	<tr class = "inutile doublon"><th>182</th><td onclick = "copier(this)">Â</td></tr>
+	<tr class = "inutile doublon"><th>183</th><td onclick = "copier(this)">À</td></tr>
+	<tr class = "utile doublon"><th>184</th><td onclick = "copier(this)">©</td></tr>
+	<tr><th>185</th><td onclick = "copier(this)">╣</td></tr>
+	<tr><th>186</th><td onclick = "copier(this)">║</td></tr>
+	<tr><th>187</th><td onclick = "copier(this)">╗</td></tr>
+	<tr><th>188</th><td onclick = "copier(this)">╝</td></tr>
+	<tr class = "doublon"><th>189</th><td onclick = "copier(this)">¢</td></tr>
+	<tr class = "doublon"><th>190</th><td onclick = "copier(this)">¥</td></tr>
+	<tr><th>191</th><td onclick = "copier(this)">┐</td></tr>
+	<tr><th>192</th><td onclick = "copier(this)">└</td></tr>
+	<tr><th>193</th><td onclick = "copier(this)">┴</td></tr>
+	<tr><th>194</th><td onclick = "copier(this)">┬</td></tr>
+	<tr><th>195</th><td onclick = "copier(this)">├</td></tr>
+	<tr><th>196</th><td onclick = "copier(this)">─</td></tr>
+	<tr><th>197</th><td onclick = "copier(this)">┼</td></tr>
+	<tr class = "inutile doublon"><th>198</th><td onclick = "copier(this)">ã</td></tr>
+	<tr class = "inutile doublon"><th>199</th><td onclick = "copier(this)">Ã</td></tr>
+	<tr><th>200</th><td onclick = "copier(this)">╚</td></tr>
+	<tr><th>201</th><td onclick = "copier(this)">╔</td></tr>
+	<tr><th>202</th><td onclick = "copier(this)">╩</td></tr>
+	<tr><th>203</th><td onclick = "copier(this)">╦</td></tr>
+	<tr><th>204</th><td onclick = "copier(this)">╠</td></tr>
+	<tr><th>205</th><td onclick = "copier(this)">═</td></tr>
+	<tr><th>206</th><td onclick = "copier(this)">╬</td></tr>
+	<tr class = "inutile doublon"><th>207</th><td onclick = "copier(this)">¤</td></tr>
+	<tr class = "doublon"><th>208</th><td onclick = "copier(this)">ð</td></tr>
+	<tr class = "doublon"><th>209</th><td onclick = "copier(this)">Ð</td></tr>
+	<tr class = "inutile doublon"><th>210</th><td onclick = "copier(this)">Ê</td></tr>
+	<tr class = "inutile doublon"><th>211</th><td onclick = "copier(this)">Ë</td></tr>
+	<tr class = "inutile doublon"><th>212</th><td onclick = "copier(this)">È</td></tr>
+	<tr><th>213</th><td onclick = "copier(this)">ı</td></tr>
+	<tr class = "doublon"><th>214</th><td onclick = "copier(this)">Í</td></tr>
+	<tr class = "inutile doublon"><th>215</th><td onclick = "copier(this)">Î</td></tr>
+	<tr class = "inutile doublon"><th>216</th><td onclick = "copier(this)">Ï</td></tr>
+	<tr><th>217</th><td onclick = "copier(this)">┘</td></tr>
+	<tr><th>218</th><td onclick = "copier(this)">┌</td></tr>
+	<tr><th>219</th><td onclick = "copier(this)">█</td></tr>
+	<tr><th>220</th><td onclick = "copier(this)">▄</td></tr>
+	<tr class = "doublon"><th>221</th><td onclick = "copier(this)">¦</td></tr>
+	<tr class = "inutile doublon"><th>222</th><td onclick = "copier(this)">Ì</td></tr>
+	<tr><th>223</th><td onclick = "copier(this)">▀</td></tr>
+	<tr class = "doublon"><th>224</th><td onclick = "copier(this)">Ó</td></tr>
+	<tr class = "doublon"><th>225</th><td onclick = "copier(this)">ß</td></tr>
+	<tr class = "inutile doublon"><th>226</th><td onclick = "copier(this)">Ô</td></tr>
+	<tr class = "inutile doublon"><th>227</th><td onclick = "copier(this)">Ò</td></tr>
+	<tr class = "inutile doublon"><th>228</th><td onclick = "copier(this)">õ</td></tr>
+	<tr class = "inutile doublon"><th>229</th><td onclick = "copier(this)">Õ</td></tr>
+	<tr class = "inutile doublon"><th>230</th><td onclick = "copier(this)">µ</td></tr>
+	<tr class = "doublon"><th>231</th><td onclick = "copier(this)">þ</td></tr>
+	<tr class = "doublon"><th>232</th><td onclick = "copier(this)">Þ</td></tr>
+	<tr class = "doublon"><th>233</th><td onclick = "copier(this)">Ú</td></tr>
+	<tr class = "inutile doublon"><th>234</th><td onclick = "copier(this)">Û</td></tr>
+	<tr class = "inutile doublon"><th>235</th><td onclick = "copier(this)">Ù</td></tr>
+	<tr class = "doublon"><th>236</th><td onclick = "copier(this)">ý</td></tr>
+	<tr class = "doublon"><th>237</th><td onclick = "copier(this)">Ý</td></tr>
+	<tr class = "doublon"><th>238</th><td onclick = "copier(this)">¯</td></tr>
+	<tr class = "doublon"><th>239</th><td onclick = "copier(this)">´</td></tr>
+	<tr class = "doublon"><th>240</th><td onclick = "copier(this)">­</td></tr>
+	<tr class = "utile doublon"><th>241</th><td onclick = "copier(this)">±</td></tr>
+	<tr><th>242</th><td onclick = "copier(this)">‗</td></tr>
+	<tr class = "utile doublon"><th>243</th><td onclick = "copier(this)">¾</td></tr>
+	<tr class = "doublon"><th>244</th><td onclick = "copier(this)">¶</td></tr>
+	<tr class = "inutile doublon"><th>245</th><td onclick = "copier(this)">§</td></tr>
+	<tr class = "utile doublon"><th>246</th><td onclick = "copier(this)">÷</td></tr>
+	<tr class = "doublon"><th>247</th><td onclick = "copier(this)">¸</td></tr>
+	<tr class = "inutile doublon"><th>248</th><td onclick = "copier(this)">°</td></tr>
+	<tr class = "inutile doublon"><th>249</th><td onclick = "copier(this)">¨</td></tr>
+	<tr class = "doublon"><th>250</th><td onclick = "copier(this)">·</td></tr>
+	<tr class = "utile doublon"><th>251</th><td onclick = "copier(this)">¹</td></tr>
+	<tr class = "utile doublon"><th>252</th><td onclick = "copier(this)">³</td></tr>
+	<tr class = "inutile doublon"><th>253</th><td onclick = "copier(this)">²</td></tr>
+	<tr><th>254</th><td onclick = "copier(this)">■</td></tr>
+	<tr class = "utile doublon"><th>255</th><td onclick = "copier(this)"> </td></tr>
 </table>
 
 <table>
-	<tr>
-		<th><button>Alt</button></th>
-		<th>Caractère</th>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>0</button><button>0</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>0</button><button>1</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>0</button><button>2</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>0</button><button>3</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>0</button><button>4</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>0</button><button>5</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>0</button><button>6</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>0</button><button>7</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>0</button><button>8</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>0</button><button>9</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>1</button><button>0</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>1</button><button>1</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>1</button><button>2</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>1</button><button>3</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>1</button><button>4</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>1</button><button>5</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>1</button><button>6</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>1</button><button>7</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>1</button><button>8</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>1</button><button>9</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>2</button><button>0</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>2</button><button>1</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>2</button><button>2</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>2</button><button>3</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>2</button><button>4</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>2</button><button>5</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>2</button><button>6</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>2</button><button>7</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>2</button><button>8</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>2</button><button>9</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>3</button><button>0</button></th>
-		<td></td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>0</button><button>3</button><button>1</button></th>
-		<td></td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>3</button><button>2</button></th>
-		<td onclick = "copier(this)"> </td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>3</button><button>3</button></th>
-		<td onclick = "copier(this)">!</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>3</button><button>4</button></th>
-		<td onclick = "copier(this)">"</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>3</button><button>5</button></th>
-		<td onclick = "copier(this)">#</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>3</button><button>6</button></th>
-		<td onclick = "copier(this)">$</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>3</button><button>7</button></th>
-		<td onclick = "copier(this)">%</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>3</button><button>8</button></th>
-		<td onclick = "copier(this)">&</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>3</button><button>9</button></th>
-		<td onclick = "copier(this)">'</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>4</button><button>0</button></th>
-		<td onclick = "copier(this)">(</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>4</button><button>1</button></th>
-		<td onclick = "copier(this)">)</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>4</button><button>2</button></th>
-		<td onclick = "copier(this)">*</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>4</button><button>3</button></th>
-		<td onclick = "copier(this)">+</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>4</button><button>4</button></th>
-		<td onclick = "copier(this)">,</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>4</button><button>5</button></th>
-		<td onclick = "copier(this)">-</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>4</button><button>6</button></th>
-		<td onclick = "copier(this)">.</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>4</button><button>7</button></th>
-		<td onclick = "copier(this)">/</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>4</button><button>8</button></th>
-		<td onclick = "copier(this)">0</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>4</button><button>9</button></th>
-		<td onclick = "copier(this)">1</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>5</button><button>0</button></th>
-		<td onclick = "copier(this)">2</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>5</button><button>1</button></th>
-		<td onclick = "copier(this)">3</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>5</button><button>2</button></th>
-		<td onclick = "copier(this)">4</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>5</button><button>3</button></th>
-		<td onclick = "copier(this)">5</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>5</button><button>4</button></th>
-		<td onclick = "copier(this)">6</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>5</button><button>5</button></th>
-		<td onclick = "copier(this)">7</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>5</button><button>6</button></th>
-		<td onclick = "copier(this)">8</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>5</button><button>7</button></th>
-		<td onclick = "copier(this)">9</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>5</button><button>8</button></th>
-		<td onclick = "copier(this)">:</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>5</button><button>9</button></th>
-		<td onclick = "copier(this)">;</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>6</button><button>0</button></th>
-		<td onclick = "copier(this)"><</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>6</button><button>1</button></th>
-		<td onclick = "copier(this)">=</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>6</button><button>2</button></th>
-		<td onclick = "copier(this)">></td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>6</button><button>3</button></th>
-		<td onclick = "copier(this)">?</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>6</button><button>4</button></th>
-		<td onclick = "copier(this)">@</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>6</button><button>5</button></th>
-		<td onclick = "copier(this)">A</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>6</button><button>6</button></th>
-		<td onclick = "copier(this)">B</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>6</button><button>7</button></th>
-		<td onclick = "copier(this)">C</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>6</button><button>8</button></th>
-		<td onclick = "copier(this)">D</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>6</button><button>9</button></th>
-		<td onclick = "copier(this)">E</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>7</button><button>0</button></th>
-		<td onclick = "copier(this)">F</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>7</button><button>1</button></th>
-		<td onclick = "copier(this)">G</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>7</button><button>2</button></th>
-		<td onclick = "copier(this)">H</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>7</button><button>3</button></th>
-		<td onclick = "copier(this)">I</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>7</button><button>4</button></th>
-		<td onclick = "copier(this)">J</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>7</button><button>5</button></th>
-		<td onclick = "copier(this)">K</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>7</button><button>6</button></th>
-		<td onclick = "copier(this)">L</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>7</button><button>7</button></th>
-		<td onclick = "copier(this)">M</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>7</button><button>8</button></th>
-		<td onclick = "copier(this)">N</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>7</button><button>9</button></th>
-		<td onclick = "copier(this)">O</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>8</button><button>0</button></th>
-		<td onclick = "copier(this)">P</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>8</button><button>1</button></th>
-		<td onclick = "copier(this)">Q</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>8</button><button>2</button></th>
-		<td onclick = "copier(this)">R</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>8</button><button>3</button></th>
-		<td onclick = "copier(this)">S</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>8</button><button>4</button></th>
-		<td onclick = "copier(this)">T</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>8</button><button>5</button></th>
-		<td onclick = "copier(this)">U</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>8</button><button>6</button></th>
-		<td onclick = "copier(this)">V</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>8</button><button>7</button></th>
-		<td onclick = "copier(this)">W</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>8</button><button>8</button></th>
-		<td onclick = "copier(this)">X</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>8</button><button>9</button></th>
-		<td onclick = "copier(this)">Y</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>9</button><button>0</button></th>
-		<td onclick = "copier(this)">Z</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>9</button><button>1</button></th>
-		<td onclick = "copier(this)">[</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>9</button><button>2</button></th>
-		<td onclick = "copier(this)">\</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>9</button><button>3</button></th>
-		<td onclick = "copier(this)">]</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>9</button><button>4</button></th>
-		<td onclick = "copier(this)">^</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>9</button><button>5</button></th>
-		<td onclick = "copier(this)">_</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>9</button><button>6</button></th>
-		<td onclick = "copier(this)">`</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>9</button><button>7</button></th>
-		<td onclick = "copier(this)">a</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>9</button><button>8</button></th>
-		<td onclick = "copier(this)">b</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>0</button><button>9</button><button>9</button></th>
-		<td onclick = "copier(this)">c</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>0</button><button>0</button></th>
-		<td onclick = "copier(this)">d</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>0</button><button>1</button></th>
-		<td onclick = "copier(this)">e</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>0</button><button>2</button></th>
-		<td onclick = "copier(this)">f</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>0</button><button>3</button></th>
-		<td onclick = "copier(this)">g</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>0</button><button>4</button></th>
-		<td onclick = "copier(this)">h</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>0</button><button>5</button></th>
-		<td onclick = "copier(this)">i</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>0</button><button>6</button></th>
-		<td onclick = "copier(this)">j</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>0</button><button>7</button></th>
-		<td onclick = "copier(this)">k</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>0</button><button>8</button></th>
-		<td onclick = "copier(this)">l</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>0</button><button>9</button></th>
-		<td onclick = "copier(this)">m</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>1</button><button>0</button></th>
-		<td onclick = "copier(this)">n</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>1</button><button>1</button></th>
-		<td onclick = "copier(this)">o</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>1</button><button>2</button></th>
-		<td onclick = "copier(this)">p</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>1</button><button>3</button></th>
-		<td onclick = "copier(this)">q</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>1</button><button>4</button></th>
-		<td onclick = "copier(this)">r</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>1</button><button>5</button></th>
-		<td onclick = "copier(this)">s</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>1</button><button>6</button></th>
-		<td onclick = "copier(this)">t</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>1</button><button>7</button></th>
-		<td onclick = "copier(this)">u</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>1</button><button>8</button></th>
-		<td onclick = "copier(this)">v</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>1</button><button>9</button></th>
-		<td onclick = "copier(this)">w</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>2</button><button>0</button></th>
-		<td onclick = "copier(this)">x</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>2</button><button>1</button></th>
-		<td onclick = "copier(this)">y</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>2</button><button>2</button></th>
-		<td onclick = "copier(this)">z</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>2</button><button>3</button></th>
-		<td onclick = "copier(this)">{</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>2</button><button>4</button></th>
-		<td onclick = "copier(this)">|</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>2</button><button>5</button></th>
-		<td onclick = "copier(this)">}</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>2</button><button>6</button></th>
-		<td onclick = "copier(this)">~</td>
-	</tr><tr class = "vide">
-		<th><button>0</button><button>1</button><button>2</button><button>7</button></th>
-		<td></td>
-	</tr><tr class = "inutile">
-		<th><button>0</button><button>1</button><button>2</button><button>8</button></th>
-		<td onclick = "copier(this)">€</td>
-	</tr><tr>
-		<th><button>0</button><button>1</button><button>2</button><button>9</button></th>
-		<td onclick = "copier(this)"></td>
-	</tr><tr>
-		<th><button>0</button><button>1</button><button>3</button><button>0</button></th>
-		<td onclick = "copier(this)">‚</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>1</button><button>3</button><button>1</button></th>
-		<td onclick = "copier(this)">ƒ</td>
-	</tr><tr>
-		<th><button>0</button><button>1</button><button>3</button><button>2</button></th>
-		<td onclick = "copier(this)">„</td>
-	</tr><tr class = "utile">
-		<th><button>0</button><button>1</button><button>3</button><button>3</button></th>
-		<td onclick = "copier(this)">…</td>
-	</tr><tr>
-		<th><button>0</button><button>1</button><button>3</button><button>4</button></th>
-		<td onclick = "copier(this)">†</td>
-	</tr><tr>
-		<th><button>0</button><button>1</button><button>3</button><button>5</button></th>
-		<td onclick = "copier(this)">‡</td>
-	</tr><tr>
-		<th><button>0</button><button>1</button><button>3</button><button>6</button></th>
-		<td onclick = "copier(this)">ˆ</td>
-	</tr><tr>
-		<th><button>0</button><button>1</button><button>3</button><button>7</button></th>
-		<td onclick = "copier(this)">‰</td>
-	</tr><tr>
-		<th><button>0</button><button>1</button><button>3</button><button>8</button></th>
-		<td onclick = "copier(this)">Š</td>
-	</tr><tr>
-		<th><button>0</button><button>1</button><button>3</button><button>9</button></th>
-		<td onclick = "copier(this)">‹</td>
-	</tr><tr class = "utile">
-		<th><button>0</button><button>1</button><button>4</button><button>0</button></th>
-		<td onclick = "copier(this)">Œ</td>
-	</tr><tr>
-		<th><button>0</button><button>1</button><button>4</button><button>1</button></th>
-		<td onclick = "copier(this)"></td>
-	</tr><tr>
-		<th><button>0</button><button>1</button><button>4</button><button>2</button></th>
-		<td onclick = "copier(this)">Ž</td>
-	</tr><tr>
-		<th><button>0</button><button>1</button><button>4</button><button>3</button></th>
-		<td onclick = "copier(this)"></td>
-	</tr><tr>
-		<th><button>0</button><button>1</button><button>4</button><button>4</button></th>
-		<td onclick = "copier(this)"></td>
-	</tr><tr>
-		<th><button>0</button><button>1</button><button>4</button><button>5</button></th>
-		<td onclick = "copier(this)">‘</td>
-	</tr><tr>
-		<th><button>0</button><button>1</button><button>4</button><button>6</button></th>
-		<td onclick = "copier(this)">’</td>
-	</tr><tr>
-		<th><button>0</button><button>1</button><button>4</button><button>7</button></th>
-		<td onclick = "copier(this)">“</td>
-	</tr><tr>
-		<th><button>0</button><button>1</button><button>4</button><button>8</button></th>
-		<td onclick = "copier(this)">”</td>
-	</tr><tr>
-		<th><button>0</button><button>1</button><button>4</button><button>9</button></th>
-		<td onclick = "copier(this)">•</td>
-	</tr><tr>
-		<th><button>0</button><button>1</button><button>5</button><button>0</button></th>
-		<td onclick = "copier(this)">–</td>
-	</tr><tr class = "utile">
-		<th><button>0</button><button>1</button><button>5</button><button>1</button></th>
-		<td onclick = "copier(this)">—</td>
-	</tr><tr class = "inutile">
-		<th><button>0</button><button>1</button><button>5</button><button>2</button></th>
-		<td onclick = "copier(this)">˜</td>
-	</tr><tr class = "utile">
-		<th><button>0</button><button>1</button><button>5</button><button>3</button></th>
-		<td onclick = "copier(this)">™</td>
-	</tr><tr>
-		<th><button>0</button><button>1</button><button>5</button><button>4</button></th>
-		<td onclick = "copier(this)">š</td>
-	</tr><tr>
-		<th><button>0</button><button>1</button><button>5</button><button>5</button></th>
-		<td onclick = "copier(this)">›</td>
-	</tr><tr class = "utile">
-		<th><button>0</button><button>1</button><button>5</button><button>6</button></th>
-		<td onclick = "copier(this)">œ</td>
-	</tr><tr>
-		<th><button>0</button><button>1</button><button>5</button><button>7</button></th>
-		<td onclick = "copier(this)"></td>
-	</tr><tr>
-		<th><button>0</button><button>1</button><button>5</button><button>8</button></th>
-		<td onclick = "copier(this)">ž</td>
-	</tr><tr>
-		<th><button>0</button><button>1</button><button>5</button><button>9</button></th>
-		<td onclick = "copier(this)">Ÿ</td>
-	</tr><tr class = "utile doublon">
-		<th><button>0</button><button>1</button><button>6</button><button>0</button></th>
-		<td onclick = "copier(this)"> </td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>1</button><button>6</button><button>1</button></th>
-		<td onclick = "copier(this)">¡</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>1</button><button>6</button><button>2</button></th>
-		<td onclick = "copier(this)">¢</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>6</button><button>3</button></th>
-		<td onclick = "copier(this)">£</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>6</button><button>4</button></th>
-		<td onclick = "copier(this)">¤</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>1</button><button>6</button><button>5</button></th>
-		<td onclick = "copier(this)">¥</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>1</button><button>6</button><button>6</button></th>
-		<td onclick = "copier(this)">¦</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>6</button><button>7</button></th>
-		<td onclick = "copier(this)">§</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>6</button><button>8</button></th>
-		<td onclick = "copier(this)">¨</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>1</button><button>6</button><button>9</button></th>
-		<td onclick = "copier(this)">©</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>1</button><button>7</button><button>0</button></th>
-		<td onclick = "copier(this)">ª</td>
-	</tr><tr class = "utile doublon">
-		<th><button>0</button><button>1</button><button>7</button><button>1</button></th>
-		<td onclick = "copier(this)">«</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>1</button><button>7</button><button>2</button></th>
-		<td onclick = "copier(this)">¬</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>1</button><button>7</button><button>3</button></th>
-		<td onclick = "copier(this)">­</td>
-	</tr><tr class = "utile doublon">
-		<th><button>0</button><button>1</button><button>7</button><button>4</button></th>
-		<td onclick = "copier(this)">®</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>1</button><button>7</button><button>5</button></th>
-		<td onclick = "copier(this)">¯</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>7</button><button>6</button></th>
-		<td onclick = "copier(this)">°</td>
-	</tr><tr class = "utile doublon">
-		<th><button>0</button><button>1</button><button>7</button><button>7</button></th>
-		<td onclick = "copier(this)">±</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>7</button><button>8</button></th>
-		<td onclick = "copier(this)">²</td>
-	</tr><tr class = "utile doublon">
-		<th><button>0</button><button>1</button><button>7</button><button>9</button></th>
-		<td onclick = "copier(this)">³</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>1</button><button>8</button><button>0</button></th>
-		<td onclick = "copier(this)">´</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>8</button><button>1</button></th>
-		<td onclick = "copier(this)">µ</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>1</button><button>8</button><button>2</button></th>
-		<td onclick = "copier(this)">¶</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>1</button><button>8</button><button>3</button></th>
-		<td onclick = "copier(this)">·</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>1</button><button>8</button><button>4</button></th>
-		<td onclick = "copier(this)">¸</td>
-	</tr><tr class = "utile doublon">
-		<th><button>0</button><button>1</button><button>8</button><button>5</button></th>
-		<td onclick = "copier(this)">¹</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>1</button><button>8</button><button>6</button></th>
-		<td onclick = "copier(this)">º</td>
-	</tr><tr class = "utile doublon">
-		<th><button>0</button><button>1</button><button>8</button><button>7</button></th>
-		<td onclick = "copier(this)">»</td>
-	</tr><tr class = "utile doublon">
-		<th><button>0</button><button>1</button><button>8</button><button>8</button></th>
-		<td onclick = "copier(this)">¼</td>
-	</tr><tr class = "utile doublon">
-		<th><button>0</button><button>1</button><button>8</button><button>9</button></th>
-		<td onclick = "copier(this)">½</td>
-	</tr><tr class = "utile doublon">
-		<th><button>0</button><button>1</button><button>9</button><button>0</button></th>
-		<td onclick = "copier(this)">¾</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>1</button><button>9</button><button>1</button></th>
-		<td onclick = "copier(this)">¿</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>9</button><button>2</button></th>
-		<td onclick = "copier(this)">À</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>1</button><button>9</button><button>3</button></th>
-		<td onclick = "copier(this)">Á</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>9</button><button>4</button></th>
-		<td onclick = "copier(this)">Â</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>9</button><button>5</button></th>
-		<td onclick = "copier(this)">Ã</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>1</button><button>9</button><button>6</button></th>
-		<td onclick = "copier(this)">Ä</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>1</button><button>9</button><button>7</button></th>
-		<td onclick = "copier(this)">Å</td>
-	</tr><tr class = "utile doublon">
-		<th><button>0</button><button>1</button><button>9</button><button>8</button></th>
-		<td onclick = "copier(this)">Æ</td>
-	</tr><tr class = "utile doublon">
-		<th><button>0</button><button>1</button><button>9</button><button>9</button></th>
-		<td onclick = "copier(this)">Ç</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>0</button><button>0</button></th>
-		<td onclick = "copier(this)">È</td>
-	</tr><tr class = "utile doublon">
-		<th><button>0</button><button>2</button><button>0</button><button>1</button></th>
-		<td onclick = "copier(this)">É</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>0</button><button>2</button></th>
-		<td onclick = "copier(this)">Ê</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>0</button><button>3</button></th>
-		<td onclick = "copier(this)">Ë</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>0</button><button>4</button></th>
-		<td onclick = "copier(this)">Ì</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>2</button><button>0</button><button>5</button></th>
-		<td onclick = "copier(this)">Í</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>0</button><button>6</button></th>
-		<td onclick = "copier(this)">Î</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>0</button><button>7</button></th>
-		<td onclick = "copier(this)">Ï</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>2</button><button>0</button><button>8</button></th>
-		<td onclick = "copier(this)">Ð</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>0</button><button>9</button></th>
-		<td onclick = "copier(this)">Ñ</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>1</button><button>0</button></th>
-		<td onclick = "copier(this)">Ò</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>2</button><button>1</button><button>1</button></th>
-		<td onclick = "copier(this)">Ó</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>1</button><button>2</button></th>
-		<td onclick = "copier(this)">Ô</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>1</button><button>3</button></th>
-		<td onclick = "copier(this)">Õ</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>1</button><button>4</button></th>
-		<td onclick = "copier(this)">Ö</td>
-	</tr><tr class = "utile doublon">
-		<th><button>0</button><button>2</button><button>1</button><button>5</button></th>
-		<td onclick = "copier(this)">×</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>2</button><button>1</button><button>6</button></th>
-		<td onclick = "copier(this)">Ø</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>1</button><button>7</button></th>
-		<td onclick = "copier(this)">Ù</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>2</button><button>1</button><button>8</button></th>
-		<td onclick = "copier(this)">Ú</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>1</button><button>9</button></th>
-		<td onclick = "copier(this)">Û</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>2</button><button>0</button></th>
-		<td onclick = "copier(this)">Ü</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>2</button><button>2</button><button>1</button></th>
-		<td onclick = "copier(this)">Ý</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>2</button><button>2</button><button>2</button></th>
-		<td onclick = "copier(this)">Þ</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>2</button><button>2</button><button>3</button></th>
-		<td onclick = "copier(this)">ß</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>2</button><button>4</button></th>
-		<td onclick = "copier(this)">à</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>2</button><button>2</button><button>5</button></th>
-		<td onclick = "copier(this)">á</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>2</button><button>6</button></th>
-		<td onclick = "copier(this)">â</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>2</button><button>7</button></th>
-		<td onclick = "copier(this)">ã</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>2</button><button>8</button></th>
-		<td onclick = "copier(this)">ä</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>2</button><button>2</button><button>9</button></th>
-		<td onclick = "copier(this)">å</td>
-	</tr><tr class = "utile doublon">
-		<th><button>0</button><button>2</button><button>3</button><button>0</button></th>
-		<td onclick = "copier(this)">æ</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>3</button><button>1</button></th>
-		<td onclick = "copier(this)">ç</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>3</button><button>2</button></th>
-		<td onclick = "copier(this)">è</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>3</button><button>3</button></th>
-		<td onclick = "copier(this)">é</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>3</button><button>4</button></th>
-		<td onclick = "copier(this)">ê</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>3</button><button>5</button></th>
-		<td onclick = "copier(this)">ë</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>3</button><button>6</button></th>
-		<td onclick = "copier(this)">ì</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>2</button><button>3</button><button>7</button></th>
-		<td onclick = "copier(this)">í</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>3</button><button>8</button></th>
-		<td onclick = "copier(this)">î</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>3</button><button>9</button></th>
-		<td onclick = "copier(this)">ï</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>2</button><button>4</button><button>0</button></th>
-		<td onclick = "copier(this)">ð</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>4</button><button>1</button></th>
-		<td onclick = "copier(this)">ñ</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>4</button><button>2</button></th>
-		<td onclick = "copier(this)">ò</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>2</button><button>4</button><button>3</button></th>
-		<td onclick = "copier(this)">ó</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>4</button><button>4</button></th>
-		<td onclick = "copier(this)">ô</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>4</button><button>5</button></th>
-		<td onclick = "copier(this)">õ</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>4</button><button>6</button></th>
-		<td onclick = "copier(this)">ö</td>
-	</tr><tr class = "utile doublon">
-		<th><button>0</button><button>2</button><button>4</button><button>7</button></th>
-		<td onclick = "copier(this)">÷</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>2</button><button>4</button><button>8</button></th>
-		<td onclick = "copier(this)">ø</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>4</button><button>9</button></th>
-		<td onclick = "copier(this)">ù</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>2</button><button>5</button><button>0</button></th>
-		<td onclick = "copier(this)">ú</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>5</button><button>1</button></th>
-		<td onclick = "copier(this)">û</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>5</button><button>2</button></th>
-		<td onclick = "copier(this)">ü</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>2</button><button>5</button><button>3</button></th>
-		<td onclick = "copier(this)">ý</td>
-	</tr><tr class = "doublon">
-		<th><button>0</button><button>2</button><button>5</button><button>4</button></th>
-		<td onclick = "copier(this)">þ</td>
-	</tr><tr class = "inutile doublon">
-		<th><button>0</button><button>2</button><button>5</button><button>5</button></th>
-		<td onclick = "copier(this)">ÿ</td>
-	</tr>
+	<tr><th>Alt</th><th>Caractère</th></tr>
+	<tr class = "vide"><th>0000</th><td></td></tr>
+	<tr class = "vide"><th>0001</th><td></td></tr>
+	<tr class = "vide"><th>0002</th><td></td></tr>
+	<tr class = "vide"><th>0003</th><td></td></tr>
+	<tr class = "vide"><th>0004</th><td></td></tr>
+	<tr class = "vide"><th>0005</th><td></td></tr>
+	<tr class = "vide"><th>0006</th><td></td></tr>
+	<tr class = "vide"><th>0007</th><td></td></tr>
+	<tr class = "vide"><th>0008</th><td></td></tr>
+	<tr class = "vide"><th>0009</th><td></td></tr>
+	<tr class = "vide"><th>0010</th><td></td></tr>
+	<tr class = "vide"><th>0011</th><td></td></tr>
+	<tr class = "vide"><th>0012</th><td></td></tr>
+	<tr class = "vide"><th>0013</th><td></td></tr>
+	<tr class = "vide"><th>0014</th><td></td></tr>
+	<tr class = "vide"><th>0015</th><td></td></tr>
+	<tr class = "vide"><th>0016</th><td></td></tr>
+	<tr class = "vide"><th>0017</th><td></td></tr>
+	<tr class = "vide"><th>0018</th><td></td></tr>
+	<tr class = "vide"><th>0019</th><td></td></tr>
+	<tr class = "vide"><th>0020</th><td></td></tr>
+	<tr class = "vide"><th>0021</th><td></td></tr>
+	<tr class = "vide"><th>0022</th><td></td></tr>
+	<tr class = "vide"><th>0023</th><td></td></tr>
+	<tr class = "vide"><th>0024</th><td></td></tr>
+	<tr class = "vide"><th>0025</th><td></td></tr>
+	<tr class = "vide"><th>0026</th><td></td></tr>
+	<tr class = "vide"><th>0027</th><td></td></tr>
+	<tr class = "vide"><th>0028</th><td></td></tr>
+	<tr class = "vide"><th>0029</th><td></td></tr>
+	<tr class = "vide"><th>0030</th><td></td></tr>
+	<tr class = "vide"><th>0031</th><td></td></tr>
+	<tr class = "inutile doublon"><th>0032</th><td onclick = "copier(this)"> </td></tr>
+	<tr class = "inutile doublon"><th>0033</th><td onclick = "copier(this)">!</td></tr>
+	<tr class = "inutile doublon"><th>0034</th><td onclick = "copier(this)">"</td></tr>
+	<tr class = "inutile doublon"><th>0035</th><td onclick = "copier(this)">#</td></tr>
+	<tr class = "inutile doublon"><th>0036</th><td onclick = "copier(this)">$</td></tr>
+	<tr class = "inutile doublon"><th>0037</th><td onclick = "copier(this)">%</td></tr>
+	<tr class = "inutile doublon"><th>0038</th><td onclick = "copier(this)">&</td></tr>
+	<tr class = "inutile doublon"><th>0039</th><td onclick = "copier(this)">'</td></tr>
+	<tr class = "inutile doublon"><th>0040</th><td onclick = "copier(this)">(</td></tr>
+	<tr class = "inutile doublon"><th>0041</th><td onclick = "copier(this)">)</td></tr>
+	<tr class = "inutile doublon"><th>0042</th><td onclick = "copier(this)">*</td></tr>
+	<tr class = "inutile doublon"><th>0043</th><td onclick = "copier(this)">+</td></tr>
+	<tr class = "inutile doublon"><th>0044</th><td onclick = "copier(this)">,</td></tr>
+	<tr class = "inutile doublon"><th>0045</th><td onclick = "copier(this)">-</td></tr>
+	<tr class = "inutile doublon"><th>0046</th><td onclick = "copier(this)">.</td></tr>
+	<tr class = "inutile doublon"><th>0047</th><td onclick = "copier(this)">/</td></tr>
+	<tr class = "inutile doublon"><th>0048</th><td onclick = "copier(this)">0</td></tr>
+	<tr class = "inutile doublon"><th>0049</th><td onclick = "copier(this)">1</td></tr>
+	<tr class = "inutile doublon"><th>0050</th><td onclick = "copier(this)">2</td></tr>
+	<tr class = "inutile doublon"><th>0051</th><td onclick = "copier(this)">3</td></tr>
+	<tr class = "inutile doublon"><th>0052</th><td onclick = "copier(this)">4</td></tr>
+	<tr class = "inutile doublon"><th>0053</th><td onclick = "copier(this)">5</td></tr>
+	<tr class = "inutile doublon"><th>0054</th><td onclick = "copier(this)">6</td></tr>
+	<tr class = "inutile doublon"><th>0055</th><td onclick = "copier(this)">7</td></tr>
+	<tr class = "inutile doublon"><th>0056</th><td onclick = "copier(this)">8</td></tr>
+	<tr class = "inutile doublon"><th>0057</th><td onclick = "copier(this)">9</td></tr>
+	<tr class = "inutile doublon"><th>0058</th><td onclick = "copier(this)">:</td></tr>
+	<tr class = "inutile doublon"><th>0059</th><td onclick = "copier(this)">;</td></tr>
+	<tr class = "inutile doublon"><th>0060</th><td onclick = "copier(this)"><</td></tr>
+	<tr class = "inutile doublon"><th>0061</th><td onclick = "copier(this)">=</td></tr>
+	<tr class = "inutile doublon"><th>0062</th><td onclick = "copier(this)">></td></tr>
+	<tr class = "inutile doublon"><th>0063</th><td onclick = "copier(this)">?</td></tr>
+	<tr class = "inutile doublon"><th>0064</th><td onclick = "copier(this)">@</td></tr>
+	<tr class = "inutile doublon"><th>0065</th><td onclick = "copier(this)">A</td></tr>
+	<tr class = "inutile doublon"><th>0066</th><td onclick = "copier(this)">B</td></tr>
+	<tr class = "inutile doublon"><th>0067</th><td onclick = "copier(this)">C</td></tr>
+	<tr class = "inutile doublon"><th>0068</th><td onclick = "copier(this)">D</td></tr>
+	<tr class = "inutile doublon"><th>0069</th><td onclick = "copier(this)">E</td></tr>
+	<tr class = "inutile doublon"><th>0070</th><td onclick = "copier(this)">F</td></tr>
+	<tr class = "inutile doublon"><th>0071</th><td onclick = "copier(this)">G</td></tr>
+	<tr class = "inutile doublon"><th>0072</th><td onclick = "copier(this)">H</td></tr>
+	<tr class = "inutile doublon"><th>0073</th><td onclick = "copier(this)">I</td></tr>
+	<tr class = "inutile doublon"><th>0074</th><td onclick = "copier(this)">J</td></tr>
+	<tr class = "inutile doublon"><th>0075</th><td onclick = "copier(this)">K</td></tr>
+	<tr class = "inutile doublon"><th>0076</th><td onclick = "copier(this)">L</td></tr>
+	<tr class = "inutile doublon"><th>0077</th><td onclick = "copier(this)">M</td></tr>
+	<tr class = "inutile doublon"><th>0078</th><td onclick = "copier(this)">N</td></tr>
+	<tr class = "inutile doublon"><th>0079</th><td onclick = "copier(this)">O</td></tr>
+	<tr class = "inutile doublon"><th>0080</th><td onclick = "copier(this)">P</td></tr>
+	<tr class = "inutile doublon"><th>0081</th><td onclick = "copier(this)">Q</td></tr>
+	<tr class = "inutile doublon"><th>0082</th><td onclick = "copier(this)">R</td></tr>
+	<tr class = "inutile doublon"><th>0083</th><td onclick = "copier(this)">S</td></tr>
+	<tr class = "inutile doublon"><th>0084</th><td onclick = "copier(this)">T</td></tr>
+	<tr class = "inutile doublon"><th>0085</th><td onclick = "copier(this)">U</td></tr>
+	<tr class = "inutile doublon"><th>0086</th><td onclick = "copier(this)">V</td></tr>
+	<tr class = "inutile doublon"><th>0087</th><td onclick = "copier(this)">W</td></tr>
+	<tr class = "inutile doublon"><th>0088</th><td onclick = "copier(this)">X</td></tr>
+	<tr class = "inutile doublon"><th>0089</th><td onclick = "copier(this)">Y</td></tr>
+	<tr class = "inutile doublon"><th>0090</th><td onclick = "copier(this)">Z</td></tr>
+	<tr class = "inutile doublon"><th>0091</th><td onclick = "copier(this)">[</td></tr>
+	<tr class = "inutile doublon"><th>0092</th><td onclick = "copier(this)">\</td></tr>
+	<tr class = "inutile doublon"><th>0093</th><td onclick = "copier(this)">]</td></tr>
+	<tr class = "inutile doublon"><th>0094</th><td onclick = "copier(this)">^</td></tr>
+	<tr class = "inutile doublon"><th>0095</th><td onclick = "copier(this)">_</td></tr>
+	<tr class = "inutile doublon"><th>0096</th><td onclick = "copier(this)">`</td></tr>
+	<tr class = "inutile doublon"><th>0097</th><td onclick = "copier(this)">a</td></tr>
+	<tr class = "inutile doublon"><th>0098</th><td onclick = "copier(this)">b</td></tr>
+	<tr class = "inutile doublon"><th>0099</th><td onclick = "copier(this)">c</td></tr>
+	<tr class = "inutile doublon"><th>0100</th><td onclick = "copier(this)">d</td></tr>
+	<tr class = "inutile doublon"><th>0101</th><td onclick = "copier(this)">e</td></tr>
+	<tr class = "inutile doublon"><th>0102</th><td onclick = "copier(this)">f</td></tr>
+	<tr class = "inutile doublon"><th>0103</th><td onclick = "copier(this)">g</td></tr>
+	<tr class = "inutile doublon"><th>0104</th><td onclick = "copier(this)">h</td></tr>
+	<tr class = "inutile doublon"><th>0105</th><td onclick = "copier(this)">i</td></tr>
+	<tr class = "inutile doublon"><th>0106</th><td onclick = "copier(this)">j</td></tr>
+	<tr class = "inutile doublon"><th>0107</th><td onclick = "copier(this)">k</td></tr>
+	<tr class = "inutile doublon"><th>0108</th><td onclick = "copier(this)">l</td></tr>
+	<tr class = "inutile doublon"><th>0109</th><td onclick = "copier(this)">m</td></tr>
+	<tr class = "inutile doublon"><th>0110</th><td onclick = "copier(this)">n</td></tr>
+	<tr class = "inutile doublon"><th>0111</th><td onclick = "copier(this)">o</td></tr>
+	<tr class = "inutile doublon"><th>0112</th><td onclick = "copier(this)">p</td></tr>
+	<tr class = "inutile doublon"><th>0113</th><td onclick = "copier(this)">q</td></tr>
+	<tr class = "inutile doublon"><th>0114</th><td onclick = "copier(this)">r</td></tr>
+	<tr class = "inutile doublon"><th>0115</th><td onclick = "copier(this)">s</td></tr>
+	<tr class = "inutile doublon"><th>0116</th><td onclick = "copier(this)">t</td></tr>
+	<tr class = "inutile doublon"><th>0117</th><td onclick = "copier(this)">u</td></tr>
+	<tr class = "inutile doublon"><th>0118</th><td onclick = "copier(this)">v</td></tr>
+	<tr class = "inutile doublon"><th>0119</th><td onclick = "copier(this)">w</td></tr>
+	<tr class = "inutile doublon"><th>0120</th><td onclick = "copier(this)">x</td></tr>
+	<tr class = "inutile doublon"><th>0121</th><td onclick = "copier(this)">y</td></tr>
+	<tr class = "inutile doublon"><th>0122</th><td onclick = "copier(this)">z</td></tr>
+	<tr class = "inutile doublon"><th>0123</th><td onclick = "copier(this)">{</td></tr>
+	<tr class = "inutile doublon"><th>0124</th><td onclick = "copier(this)">|</td></tr>
+	<tr class = "inutile doublon"><th>0125</th><td onclick = "copier(this)">}</td></tr>
+	<tr class = "inutile doublon"><th>0126</th><td onclick = "copier(this)">~</td></tr>
+	<tr class = "vide"><th>0127</th><td></td></tr>
+	<tr class = "inutile"><th>0128</th><td onclick = "copier(this)">€</td></tr>
+	<tr><th>0129</th><td onclick = "copier(this)"></td></tr>
+	<tr><th>0130</th><td onclick = "copier(this)">‚</td></tr>
+	<tr class = "doublon"><th>0131</th><td onclick = "copier(this)">ƒ</td></tr>
+	<tr><th>0132</th><td onclick = "copier(this)">„</td></tr>
+	<tr class = "utile"><th>0133</th><td onclick = "copier(this)">…</td></tr>
+	<tr><th>0134</th><td onclick = "copier(this)">†</td></tr>
+	<tr><th>0135</th><td onclick = "copier(this)">‡</td></tr>
+	<tr><th>0136</th><td onclick = "copier(this)">ˆ</td></tr>
+	<tr><th>0137</th><td onclick = "copier(this)">‰</td></tr>
+	<tr><th>0138</th><td onclick = "copier(this)">Š</td></tr>
+	<tr><th>0139</th><td onclick = "copier(this)">‹</td></tr>
+	<tr class = "utile"><th>0140</th><td onclick = "copier(this)">Œ</td></tr>
+	<tr><th>0141</th><td onclick = "copier(this)"></td></tr>
+	<tr><th>0142</th><td onclick = "copier(this)">Ž</td></tr>
+	<tr><th>0143</th><td onclick = "copier(this)"></td></tr>
+	<tr><th>0144</th><td onclick = "copier(this)"></td></tr>
+	<tr><th>0145</th><td onclick = "copier(this)">‘</td></tr>
+	<tr><th>0146</th><td onclick = "copier(this)">’</td></tr>
+	<tr><th>0147</th><td onclick = "copier(this)">“</td></tr>
+	<tr><th>0148</th><td onclick = "copier(this)">”</td></tr>
+	<tr><th>0149</th><td onclick = "copier(this)">•</td></tr>
+	<tr><th>0150</th><td onclick = "copier(this)">–</td></tr>
+	<tr class = "utile"><th>0151</th><td onclick = "copier(this)">—</td></tr>
+	<tr class = "inutile"><th>0152</th><td onclick = "copier(this)">˜</td></tr>
+	<tr class = "utile"><th>0153</th><td onclick = "copier(this)">™</td></tr>
+	<tr><th>0154</th><td onclick = "copier(this)">š</td></tr>
+	<tr><th>0155</th><td onclick = "copier(this)">›</td></tr>
+	<tr class = "utile"><th>0156</th><td onclick = "copier(this)">œ</td></tr>
+	<tr><th>0157</th><td onclick = "copier(this)"></td></tr>
+	<tr><th>0158</th><td onclick = "copier(this)">ž</td></tr>
+	<tr><th>0159</th><td onclick = "copier(this)">Ÿ</td></tr>
+	<tr class = "utile doublon"><th>0160</th><td onclick = "copier(this)"> </td></tr>
+	<tr class = "doublon"><th>0161</th><td onclick = "copier(this)">¡</td></tr>
+	<tr class = "doublon"><th>0162</th><td onclick = "copier(this)">¢</td></tr>
+	<tr class = "inutile doublon"><th>0163</th><td onclick = "copier(this)">£</td></tr>
+	<tr class = "inutile doublon"><th>0164</th><td onclick = "copier(this)">¤</td></tr>
+	<tr class = "doublon"><th>0165</th><td onclick = "copier(this)">¥</td></tr>
+	<tr class = "doublon"><th>0166</th><td onclick = "copier(this)">¦</td></tr>
+	<tr class = "inutile doublon"><th>0167</th><td onclick = "copier(this)">§</td></tr>
+	<tr class = "inutile doublon"><th>0168</th><td onclick = "copier(this)">¨</td></tr>
+	<tr class = "doublon"><th>0169</th><td onclick = "copier(this)">©</td></tr>
+	<tr class = "doublon"><th>0170</th><td onclick = "copier(this)">ª</td></tr>
+	<tr class = "utile doublon"><th>0171</th><td onclick = "copier(this)">«</td></tr>
+	<tr class = "doublon"><th>0172</th><td onclick = "copier(this)">¬</td></tr>
+	<tr class = "doublon"><th>0173</th><td onclick = "copier(this)">­</td></tr>
+	<tr class = "utile doublon"><th>0174</th><td onclick = "copier(this)">®</td></tr>
+	<tr class = "doublon"><th>0175</th><td onclick = "copier(this)">¯</td></tr>
+	<tr class = "inutile doublon"><th>0176</th><td onclick = "copier(this)">°</td></tr>
+	<tr class = "utile doublon"><th>0177</th><td onclick = "copier(this)">±</td></tr>
+	<tr class = "inutile doublon"><th>0178</th><td onclick = "copier(this)">²</td></tr>
+	<tr class = "utile doublon"><th>0179</th><td onclick = "copier(this)">³</td></tr>
+	<tr class = "doublon"><th>0180</th><td onclick = "copier(this)">´</td></tr>
+	<tr class = "inutile doublon"><th>0181</th><td onclick = "copier(this)">µ</td></tr>
+	<tr class = "doublon"><th>0182</th><td onclick = "copier(this)">¶</td></tr>
+	<tr class = "doublon"><th>0183</th><td onclick = "copier(this)">·</td></tr>
+	<tr class = "doublon"><th>0184</th><td onclick = "copier(this)">¸</td></tr>
+	<tr class = "utile doublon"><th>0185</th><td onclick = "copier(this)">¹</td></tr>
+	<tr class = "doublon"><th>0186</th><td onclick = "copier(this)">º</td></tr>
+	<tr class = "utile doublon"><th>0187</th><td onclick = "copier(this)">»</td></tr>
+	<tr class = "utile doublon"><th>0188</th><td onclick = "copier(this)">¼</td></tr>
+	<tr class = "utile doublon"><th>0189</th><td onclick = "copier(this)">½</td></tr>
+	<tr class = "utile doublon"><th>0190</th><td onclick = "copier(this)">¾</td></tr>
+	<tr class = "doublon"><th>0191</th><td onclick = "copier(this)">¿</td></tr>
+	<tr class = "inutile doublon"><th>0192</th><td onclick = "copier(this)">À</td></tr>
+	<tr class = "doublon"><th>0193</th><td onclick = "copier(this)">Á</td></tr>
+	<tr class = "inutile doublon"><th>0194</th><td onclick = "copier(this)">Â</td></tr>
+	<tr class = "inutile doublon"><th>0195</th><td onclick = "copier(this)">Ã</td></tr>
+	<tr class = "inutile doublon"><th>0196</th><td onclick = "copier(this)">Ä</td></tr>
+	<tr class = "doublon"><th>0197</th><td onclick = "copier(this)">Å</td></tr>
+	<tr class = "utile doublon"><th>0198</th><td onclick = "copier(this)">Æ</td></tr>
+	<tr class = "utile doublon"><th>0199</th><td onclick = "copier(this)">Ç</td></tr>
+	<tr class = "inutile doublon"><th>0200</th><td onclick = "copier(this)">È</td></tr>
+	<tr class = "utile doublon"><th>0201</th><td onclick = "copier(this)">É</td></tr>
+	<tr class = "inutile doublon"><th>0202</th><td onclick = "copier(this)">Ê</td></tr>
+	<tr class = "inutile doublon"><th>0203</th><td onclick = "copier(this)">Ë</td></tr>
+	<tr class = "inutile doublon"><th>0204</th><td onclick = "copier(this)">Ì</td></tr>
+	<tr class = "doublon"><th>0205</th><td onclick = "copier(this)">Í</td></tr>
+	<tr class = "inutile doublon"><th>0206</th><td onclick = "copier(this)">Î</td></tr>
+	<tr class = "inutile doublon"><th>0207</th><td onclick = "copier(this)">Ï</td></tr>
+	<tr class = "doublon"><th>0208</th><td onclick = "copier(this)">Ð</td></tr>
+	<tr class = "inutile doublon"><th>0209</th><td onclick = "copier(this)">Ñ</td></tr>
+	<tr class = "inutile doublon"><th>0210</th><td onclick = "copier(this)">Ò</td></tr>
+	<tr class = "doublon"><th>0211</th><td onclick = "copier(this)">Ó</td></tr>
+	<tr class = "inutile doublon"><th>0212</th><td onclick = "copier(this)">Ô</td></tr>
+	<tr class = "inutile doublon"><th>0213</th><td onclick = "copier(this)">Õ</td></tr>
+	<tr class = "inutile doublon"><th>0214</th><td onclick = "copier(this)">Ö</td></tr>
+	<tr class = "utile doublon"><th>0215</th><td onclick = "copier(this)">×</td></tr>
+	<tr class = "doublon"><th>0216</th><td onclick = "copier(this)">Ø</td></tr>
+	<tr class = "inutile doublon"><th>0217</th><td onclick = "copier(this)">Ù</td></tr>
+	<tr class = "doublon"><th>0218</th><td onclick = "copier(this)">Ú</td></tr>
+	<tr class = "inutile doublon"><th>0219</th><td onclick = "copier(this)">Û</td></tr>
+	<tr class = "inutile doublon"><th>0220</th><td onclick = "copier(this)">Ü</td></tr>
+	<tr class = "doublon"><th>0221</th><td onclick = "copier(this)">Ý</td></tr>
+	<tr class = "doublon"><th>0222</th><td onclick = "copier(this)">Þ</td></tr>
+	<tr class = "doublon"><th>0223</th><td onclick = "copier(this)">ß</td></tr>
+	<tr class = "inutile doublon"><th>0224</th><td onclick = "copier(this)">à</td></tr>
+	<tr class = "doublon"><th>0225</th><td onclick = "copier(this)">á</td></tr>
+	<tr class = "inutile doublon"><th>0226</th><td onclick = "copier(this)">â</td></tr>
+	<tr class = "inutile doublon"><th>0227</th><td onclick = "copier(this)">ã</td></tr>
+	<tr class = "inutile doublon"><th>0228</th><td onclick = "copier(this)">ä</td></tr>
+	<tr class = "doublon"><th>0229</th><td onclick = "copier(this)">å</td></tr>
+	<tr class = "utile doublon"><th>0230</th><td onclick = "copier(this)">æ</td></tr>
+	<tr class = "inutile doublon"><th>0231</th><td onclick = "copier(this)">ç</td></tr>
+	<tr class = "inutile doublon"><th>0232</th><td onclick = "copier(this)">è</td></tr>
+	<tr class = "inutile doublon"><th>0233</th><td onclick = "copier(this)">é</td></tr>
+	<tr class = "inutile doublon"><th>0234</th><td onclick = "copier(this)">ê</td></tr>
+	<tr class = "inutile doublon"><th>0235</th><td onclick = "copier(this)">ë</td></tr>
+	<tr class = "inutile doublon"><th>0236</th><td onclick = "copier(this)">ì</td></tr>
+	<tr class = "doublon"><th>0237</th><td onclick = "copier(this)">í</td></tr>
+	<tr class = "inutile doublon"><th>0238</th><td onclick = "copier(this)">î</td></tr>
+	<tr class = "inutile doublon"><th>0239</th><td onclick = "copier(this)">ï</td></tr>
+	<tr class = "doublon"><th>0240</th><td onclick = "copier(this)">ð</td></tr>
+	<tr class = "inutile doublon"><th>0241</th><td onclick = "copier(this)">ñ</td></tr>
+	<tr class = "inutile doublon"><th>0242</th><td onclick = "copier(this)">ò</td></tr>
+	<tr class = "doublon"><th>0243</th><td onclick = "copier(this)">ó</td></tr>
+	<tr class = "inutile doublon"><th>0244</th><td onclick = "copier(this)">ô</td></tr>
+	<tr class = "inutile doublon"><th>0245</th><td onclick = "copier(this)">õ</td></tr>
+	<tr class = "inutile doublon"><th>0246</th><td onclick = "copier(this)">ö</td></tr>
+	<tr class = "utile doublon"><th>0247</th><td onclick = "copier(this)">÷</td></tr>
+	<tr class = "doublon"><th>0248</th><td onclick = "copier(this)">ø</td></tr>
+	<tr class = "inutile doublon"><th>0249</th><td onclick = "copier(this)">ù</td></tr>
+	<tr class = "doublon"><th>0250</th><td onclick = "copier(this)">ú</td></tr>
+	<tr class = "inutile doublon"><th>0251</th><td onclick = "copier(this)">û</td></tr>
+	<tr class = "inutile doublon"><th>0252</th><td onclick = "copier(this)">ü</td></tr>
+	<tr class = "doublon"><th>0253</th><td onclick = "copier(this)">ý</td></tr>
+	<tr class = "doublon"><th>0254</th><td onclick = "copier(this)">þ</td></tr>
+	<tr class = "inutile doublon"><th>0255</th><td onclick = "copier(this)">ÿ</td></tr>
 </table>
 </div>
 
