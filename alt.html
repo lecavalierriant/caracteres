@@ -15,10 +15,10 @@
 					cellule = ligne.firstElementChild;
 					if (cellule.innerText == "Alt") {cellule.innerHTML = "<button>Alt</button>";}
 					else if (!isNaN(cellule.innerText)) {
-						aaa = cellule.innerText.split("");
-						bbb = "";
-						for (i = 0; i < aaa.length; i++) {bbb += "<button>" + aaa[i] + "</button>"}
-						cellule.innerHTML = bbb;
+						partitions = cellule.innerText.split("");
+						intérieur = "";
+						for (i = 0; i < partitions.length; i++) {intérieur += "<button>" + partitions[i] + "</button>"}
+						cellule.innerHTML = intérieur;
 					}
 				}
 			);
