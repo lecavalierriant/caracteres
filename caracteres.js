@@ -1,37 +1,36 @@
+window.addEventListener("load", initialiser);
+
 copier = (caractère) => {
 	navigator.clipboard.writeText(caractère.innerHTML).then(
 		() => {alert("Caractère « " + caractère.innerHTML + " » copié !");}
 	);
 };
 
-document.addEventListener(
-	"DOMContentLoaded",
-	function() {
-		switch (document.title) {
-			case "Tous":
-				éléments = document.querySelectorAll("td");
-				break;
-			default:
-				éléments = document.querySelectorAll("tr");
-		}
-		total = éléments.length;
-		occurrences = {};
-		nombreDeClasses = 0;
-		éléments.forEach(
-			function (élément) {
-				classe = élément.getAttribute("class");
-				if (classe) {
-					occurrences[classe] = (occurrences[classe] || 0) + 1;
-					nombreDeClasses++;
-				}
+function initialiser() {
+			switch (document.title) {
+				case "Tous":
+					éléments = document.querySelectorAll("td");
+					break;
+				default:
+					éléments = document.querySelectorAll("tr");
 			}
-		);
-		statistiques.insertRow().insertCell(0).outerHTML = "<th>Classe</th><th>Occurrences</th><th>Proportion</th>";
-		nouvelleLigneStatistiques("Défaut", total - nombreDeClasses, total);
-		for (classe in occurrences) {nouvelleLigneStatistiques(classe, occurrences[classe], total);}
-		nouvelleLigneStatistiques("Total", total, total);
-	}
-);
+			total = éléments.length;
+			occurrences = {};
+			nombreDeClasses = 0;
+			éléments.forEach(
+				function (élément) {
+					classe = élément.getAttribute("class");
+					if (classe) {
+						occurrences[classe] = (occurrences[classe] || 0) + 1;
+						nombreDeClasses++;
+					}
+				}
+			);
+			statistiques.insertRow().insertCell(0).outerHTML = "<th>Classe</th><th>Occurrences</th><th>Proportion</th>";
+			nouvelleLigneStatistiques("Défaut", total - nombreDeClasses, total);
+			for (classe in occurrences) {nouvelleLigneStatistiques(classe, occurrences[classe], total);}
+			nouvelleLigneStatistiques("Total", total, total);
+}
 
 function nouvelleLigneStatistiques(classe, occurrences, total) {
 	pourcentage = (occurrences / total) * 100;
