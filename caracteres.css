@@ -18,9 +18,9 @@ td:hover {
 	text-shadow: none;
 }
 
-.inutile {background-color: #cc0000;}
-.utile {background-color: #00cccc}
-.doublon *:not(button) {border: 2px dashed #cccc00;}
+.inutile {background-color: #c00;}
+.utile {background-color: #0cc}
+.doublon *:not(button) {border: 2px dashed #cc0;}
 
 @media (min-width: 1000px) {body > div {columns: 2;}}
 
