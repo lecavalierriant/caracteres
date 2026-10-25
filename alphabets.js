@@ -145,31 +145,31 @@ minuscules["Grec"] = ["α", "β", "γ", "δ", "ε", "ϝ", "γ", "η", "ι", "ι"
 chiffres["Grec"] = chiffres["Normal"];
 
 majuscules["Grec Mathématique gras sans empattement"] = ["𝝖", "𝝗", "𝝘", "𝝙", "𝝚", majuscules["Normal"][5], "𝝘", "𝝜", "𝝞", "𝝞", "𝝟", "𝝠", "𝝡", "𝝢", "𝝤", "𝝥", majuscules["Normal"][16], "𝝦", "𝝨", "𝝩", "𝝪", "𝝪", "𝝪𝝪", "𝝬", "𝝪", "𝝛"];
-minuscules["Grec Mathématique gras sans empattement"] = ["𝝰", "𝝱", "𝝲", "𝝳", "𝝴", minuscules["Normal"][5], "𝝲", "𝝶", "𝝸", "𝝸", "𝝹", "𝝺", "𝝻", "𝝼", "𝝾", "𝝿", minuscules["Normal"][16], "𝞀", "𝞂", "𝞃", "𝞄", "𝞄", "𝞄𝞄", "𝞆", "𝞄", "𝝵"]; // "𝞁"
+minuscules["Grec Mathématique gras sans empattement"] = ["𝝰", "𝝱", "𝝲", "𝝳", "𝝴", minuscules["Normal"][5], "𝝲", "𝝶", "𝝸", "𝝸", "𝝹", "𝝺", "𝝻", "𝝼", "𝝾", "𝝿", minuscules["Normal"][16], "𝞀", "𝞂", "𝞃", "𝞄", "𝞄", "𝞄𝞄", "𝞆", "𝞄", "𝝵"];
 chiffres["Grec Mathématique gras sans empattement"] = chiffres["Normal"];
 
 majuscules["Grec Mathématique italique gras sans empattement"] = ["𝞐", "𝞑", "𝞒", "𝞓", "𝞔", majuscules["Normal"][5], "𝞒", "𝞖", "𝞘", "𝞘", "𝞙", "𝞚", "𝞛", "𝞜", "𝞞", "𝞟", majuscules["Normal"][16], "𝞠", "𝞢", "𝞣", "𝞤", "𝞤", "𝞤𝞤", "𝞦", "𝞤", "𝞕"];
-minuscules["Grec Mathématique italique gras sans empattement"] = ["𝞪", "𝞫", "𝞬", "𝞭", "𝞮", minuscules["Normal"][5], "𝞬", "𝞰", "𝞲", "𝞲", "𝞳", "𝞴", "𝞵", "𝞶", "𝞸", "𝞹", minuscules["Normal"][16], "𝞺", "𝞼", "𝞽", "𝞾", "𝞾", "𝞾𝞾", "𝟀", "𝞾", "𝞯"]; // "𝞻"
+minuscules["Grec Mathématique italique gras sans empattement"] = ["𝞪", "𝞫", "𝞬", "𝞭", "𝞮", minuscules["Normal"][5], "𝞬", "𝞰", "𝞲", "𝞲", "𝞳", "𝞴", "𝞵", "𝞶", "𝞸", "𝞹", minuscules["Normal"][16], "𝞺", "𝞼", "𝞽", "𝞾", "𝞾", "𝞾𝞾", "𝟀", "𝞾", "𝞯"];
 chiffres["Grec Mathématique italique gras sans empattement"] = chiffres["Normal"];
 
 majuscules["Grec Mathématique gras"] = ["𝚨", "𝚩", "𝚪", "𝚫", "𝚬", majuscules["Normal"][5], "𝚪", "𝚮", "𝚰", "𝚰", "𝚱", "𝚲", "𝚳", "𝚴", "𝚶", "𝚷", majuscules["Normal"][16], "𝚸", "𝚺", "𝚻", "𝚼", "𝚼", "𝚼𝚼", "𝚾", "𝚼", "𝚭"];
-minuscules["Grec Mathématique gras"] = ["𝛂", "𝛃", "𝛄", "𝛅", "𝛆", minuscules["Normal"][5], "𝛄", "𝛈", "𝛊", "𝛊", "𝛋", "𝛌", "𝛍", "𝛎", "𝛐", "𝛑", minuscules["Normal"][16], "𝛒", "𝛔", "𝛕", "𝛖", "𝛖", "𝛖𝛖", "𝛘", "𝛖", "𝛇"]; // "𝛓"
+minuscules["Grec Mathématique gras"] = ["𝛂", "𝛃", "𝛄", "𝛅", "𝛆", minuscules["Normal"][5], "𝛄", "𝛈", "𝛊", "𝛊", "𝛋", "𝛌", "𝛍", "𝛎", "𝛐", "𝛑", minuscules["Normal"][16], "𝛒", "𝛔", "𝛕", "𝛖", "𝛖", "𝛖𝛖", "𝛘", "𝛖", "𝛇"];
 chiffres["Grec Mathématique gras"] = chiffres["Normal"];
 
 majuscules["Grec Mathématique italique"] = ["𝛢", "𝛣", "𝛤", "𝛥", "𝛦", majuscules["Normal"][5], "𝛤", "𝛨", "𝛪", "𝛪", "𝛫", "𝛬", "𝛭", "𝛮", "𝛰", "𝛱", majuscules["Normal"][16], "𝛲", "𝛴", "𝛵", "𝛶", "𝛶", "𝛶𝛶", "𝛸", "𝛶", "𝛧"];
-minuscules["Grec Mathématique italique"] = ["𝛼", "𝛽", "𝛾", "𝛿", "𝜀", minuscules["Normal"][5], "𝛾", "𝜂", "𝜄", "𝜄", "𝜅", "𝜆", "𝜇", "𝜈", "𝜊", "𝜋", minuscules["Normal"][16], "𝜌", "𝜎", "𝜏", "𝜐", "𝜐", "𝜐𝜐", "𝜒", "𝜐", "𝜁"]; // "𝜍"
+minuscules["Grec Mathématique italique"] = ["𝛼", "𝛽", "𝛾", "𝛿", "𝜀", minuscules["Normal"][5], "𝛾", "𝜂", "𝜄", "𝜄", "𝜅", "𝜆", "𝜇", "𝜈", "𝜊", "𝜋", minuscules["Normal"][16], "𝜌", "𝜎", "𝜏", "𝜐", "𝜐", "𝜐𝜐", "𝜒", "𝜐", "𝜁"];
 chiffres["Grec Mathématique italique"] = chiffres["Normal"];
 
 majuscules["Grec Mathématique italique gras"] = ["𝜜", "𝜝", "𝜞", "𝜟", "𝜠", majuscules["Normal"][5], "𝜞", "𝜢", "𝜤", "𝜤", "𝜥", "𝜦", "𝜧", "𝜨", "𝜪", "𝜫", majuscules["Normal"][16], "𝜬", "𝜮", "𝜯", "𝜰", "𝜰", "𝜰𝜰", "𝜲", "𝜰", "𝜡"];
-minuscules["Grec Mathématique italique gras"] = ["𝜶", "𝜷", "𝜸", "𝜹", "𝜺", minuscules["Normal"][5], "𝜸", "𝜼", "𝜾", "𝜾", "𝜿", "𝝀", "𝝁", "𝝂", "𝝄", "𝝅", minuscules["Normal"][16], "𝝆", "𝝈", "𝝉", "𝝊", "𝝊", "𝝊𝝊", "𝝌", "𝝊", "𝜻"]; // "𝝇"
+minuscules["Grec Mathématique italique gras"] = ["𝜶", "𝜷", "𝜸", "𝜹", "𝜺", minuscules["Normal"][5], "𝜸", "𝜼", "𝜾", "𝜾", "𝜿", "𝝀", "𝝁", "𝝂", "𝝄", "𝝅", minuscules["Normal"][16], "𝝆", "𝝈", "𝝉", "𝝊", "𝝊", "𝝊𝝊", "𝝌", "𝝊", "𝜻"];
 chiffres["Grec Mathématique italique gras"] = chiffres["Normal"];
 
 majuscules["Gotique"] = ["𐌰", "𐌱", "𐌲", "𐌳", "𐌴", "𐍆", "𐌲", "𐌷", "𐌹", "𐌹", "𐌺", "𐌻", "𐌼", "𐌽", "𐍉", "𐍀", "𐌵", "𐍂", "𐍃", "𐍄", "𐍅", "𐍅", "𐍅𐍅", "𐍇", "𐍅", "𐌶"];
 minuscules["Gotique"] = majuscules["Gotique"];
 chiffres["Gotique"] = chiffres["Normal"];
 
-majuscules["Cyrillique"] = ["А", "В", "Г", "Д", "Е", majuscules["Normal"][5], "Г", "И", "І", "І", "К", "Л", "М", "Н", "О", "П", majuscules["Normal"][16], "Р", "С", "Т", "У", "У", "УУ", "Х", "У", "З"]; // "Є"
-minuscules["Cyrillique"] = ["а", "в", "г", "д", "е", minuscules["Normal"][5], "г", "и", "і", "і", "к", "л", "м", "н", "о", "п", minuscules["Normal"][16], "р", "с", "т", "у", "у", "уу", "х", "у", "з"]; // "є"
+majuscules["Cyrillique"] = ["А", "В", "Г", "Д", "Е", majuscules["Normal"][5], "Г", "И", "І", "І", "К", "Л", "М", "Н", "О", "П", majuscules["Normal"][16], "Р", "С", "Т", "У", "У", "УУ", "Х", "У", "З"];
+minuscules["Cyrillique"] = ["а", "в", "г", "д", "е", minuscules["Normal"][5], "г", "и", "і", "і", "к", "л", "м", "н", "о", "п", minuscules["Normal"][16], "р", "с", "т", "у", "у", "уу", "х", "у", "з"];
 chiffres["Cyrillique"] = chiffres["Normal"];
 
 majuscules["Copte"] = ["Ⲁ", "Ⲃ", "Ⲅ", "Ⲇ", "Ⲉ", majuscules["Normal"][5], "Ⲅ", "Ⲏ", "Ⲓ", "Ⲓ", "Ⲕ", "Ⲗ", "Ⲙ", "Ⲛ", "Ⲟ", "Ⲡ", majuscules["Normal"][16], "Ⲣ", "Ⲥ", "Ⲧ", "Ⲩ", "Ⲩ", "ⲨⲨ", "Ⲭ", "Ⲩ", "Ⲍ"];
