@@ -1,10 +1,9 @@
 window.addEventListener("load", initialiser);
 
-copier = (caractère) => {
-	navigator.clipboard.writeText(caractère.innerHTML).then(
-		() => {alert("Caractère « " + caractère.innerHTML + " » copié !");}
-	);
-};
+function copier(élément) {
+	navigator.clipboard.writeText(élément.innerText)
+	alert("Caractère « " + élément.innerText + " » copié !");
+}
 
 function initialiser() {
 			switch (document.title) {
