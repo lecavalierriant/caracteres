@@ -3,61 +3,23 @@ function alphabets() {
 	styles = Object.keys(majuscules);
 	for (style of styles) {
 		for (caractère of entrée.value) {
-			diacritique = "";
-			if (caractère in décompositions) {
-				diacritique = décompositions[caractère][1];
-				caractère = décompositions[caractère][0];
-			}
 			if (caractère >= "A" && caractère <= "Z") {
 				indice = caractère.charCodeAt(0) - "A".charCodeAt(0);
 				texte += majuscules[style][indice] ?? caractère;
-				texte += diacritique;
 			} else if (caractère >= "a" && caractère <= "z") {
 				indice = caractère.charCodeAt(0) - "a".charCodeAt(0);
 				texte += minuscules[style][indice] ?? caractère;
-				texte += diacritique;
 			} else if (caractère >= "0" && caractère <= "9") {
 				indice = parseInt(caractère);
 				texte += chiffres[style][indice] ?? caractère;
-				texte += diacritique;
 			} else {
 				texte += caractère;
-				texte += diacritique;
 			}
 		}
 		texte += "<br>";
 	}
 	sortie.innerHTML = texte
-	document.querySelectorAll("button")[1].style.display = "inline";
-}
-
-décompositions = {
-	"À": ["A", "\u0300",], "à": ["a", "\u0300",],
-	"Á": ["A", "\u0301",], "á": ["a", "\u0301",],
-	"Â": ["A", "\u0302",], "â": ["a", "\u0302",],
-	"Ä": ["A", "\u0308",], "ä": ["a", "\u0308",],
-	"Ç": ["C", "\u0327",], "ç": ["c", "\u0327",],
-	"È": ["E", "\u0300",], "è": ["e", "\u0300",],
-	"É": ["E", "\u0301",], "é": ["e", "\u0301",],
-	"Ê": ["E", "\u0302",], "ê": ["e", "\u0302",],
-	"Ë": ["E", "\u0308",], "ë": ["e", "\u0308",],
-	"Ì": ["I", "\u0300",], "ì": ["i", "\u0300",],
-	"Í": ["I", "\u0301",], "í": ["i", "\u0301",],
-	"Î": ["I", "\u0302",], "î": ["i", "\u0302",],
-	"Ï": ["I", "\u0308",], "ï": ["i", "\u0308",],
-	"Ñ": ["N", "\u0303",], "ñ": ["n", "\u0303",],
-	"Ò": ["O", "\u0300",], "ò": ["o", "\u0300",],
-	"Ó": ["O", "\u0301",], "ó": ["o", "\u0301",],
-	"Ô": ["O", "\u0302",], "ô": ["o", "\u0302",],
-	"Ö": ["O", "\u0308",], "ö": ["o", "\u0308",],
-	"Ù": ["U", "\u0300",], "ù": ["u", "\u0300",],
-	"Ú": ["U", "\u0301",], "ú": ["u", "\u0301",],
-	"Û": ["U", "\u0302",], "û": ["u", "\u0302",],
-	"Ü": ["U", "\u0308",], "ü": ["u", "\u0308",],
-	"Ỳ": ["Y", "\u0300",], "ỳ": ["y", "\u0300",],
-	"Ý": ["Y", "\u0301",], "ý": ["y", "\u0301",],
-	"Ŷ": ["Y", "\u0302",], "ŷ": ["y", "\u0302",],
-	"Ÿ": ["Y", "\u0308",], "ÿ": ["y", "\u0308",],
+	document.querySelector("button").style.display = "inline";
 }
 
 majuscules = {"Normal": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"};
