@@ -125,27 +125,3 @@ chiffres["Grec Mathématique italique"] = chiffres["Normal"];
 majuscules["Grec Mathématique italique gras"] = ["𝜜", "𝜝", "𝜞", "𝜟", "𝜠", majuscules["Normal"][5], "𝜞", "𝜢", "𝜤", "𝜤", "𝜥", "𝜦", "𝜧", "𝜨", "𝜪", "𝜫", majuscules["Normal"][16], "𝜬", "𝜮", "𝜯", "𝜰", "𝜰", "𝜰𝜰", "𝜲", "𝜰", "𝜡"];
 minuscules["Grec Mathématique italique gras"] = ["𝜶", "𝜷", "𝜸", "𝜹", "𝜺", minuscules["Normal"][5], "𝜸", "𝜼", "𝜾", "𝜾", "𝜿", "𝝀", "𝝁", "𝝂", "𝝄", "𝝅", minuscules["Normal"][16], "𝝆", "𝝈", "𝝉", "𝝊", "𝝊", "𝝊𝝊", "𝝌", "𝝊", "𝜻"];
 chiffres["Grec Mathématique italique gras"] = chiffres["Normal"];
-
-majuscules["Gotique"] = ["𐌰", "𐌱", "𐌲", "𐌳", "𐌴", "𐍆", "𐌲", "𐌷", "𐌹", "𐌹", "𐌺", "𐌻", "𐌼", "𐌽", "𐍉", "𐍀", "𐌵", "𐍂", "𐍃", "𐍄", "𐍅", "𐍅", "𐍅𐍅", "𐍇", "𐍅", "𐌶"];
-minuscules["Gotique"] = majuscules["Gotique"];
-chiffres["Gotique"] = chiffres["Normal"];
-
-majuscules["Cyrillique"] = ["А", "В", "Г", "Д", "Е", majuscules["Normal"][5], "Г", "И", "І", "І", "К", "Л", "М", "Н", "О", "П", majuscules["Normal"][16], "Р", "С", "Т", "У", "У", "УУ", "Х", "У", "З"];
-minuscules["Cyrillique"] = ["а", "в", "г", "д", "е", minuscules["Normal"][5], "г", "и", "і", "і", "к", "л", "м", "н", "о", "п", minuscules["Normal"][16], "р", "с", "т", "у", "у", "уу", "х", "у", "з"];
-chiffres["Cyrillique"] = chiffres["Normal"];
-
-majuscules["Copte"] = ["Ⲁ", "Ⲃ", "Ⲅ", "Ⲇ", "Ⲉ", majuscules["Normal"][5], "Ⲅ", "Ⲏ", "Ⲓ", "Ⲓ", "Ⲕ", "Ⲗ", "Ⲙ", "Ⲛ", "Ⲟ", "Ⲡ", majuscules["Normal"][16], "Ⲣ", "Ⲥ", "Ⲧ", "Ⲩ", "Ⲩ", "ⲨⲨ", "Ⲭ", "Ⲩ", "Ⲍ"];
-minuscules["Copte"] = ["ⲁ", "ⲃ", "ⲅ", "ⲇ", "ⲉ", minuscules["Normal"][5], "ⲅ", "ⲏ", "ⲓ", "ⲓ", "ⲕ", "ⲗ", "ⲙ", "ⲛ", "ⲟ", "ⲡ", minuscules["Normal"][16], "ⲣ", "ⲥ", "ⲧ", "ⲩ", "ⲩ", "ⲩⲩ", "ⲭ", "ⲩ", "ⲍ"];
-chiffres["Copte"] = chiffres["Normal"];
-
-majuscules["Vieil italique"] = ["𐌀", "𐌁", "𐌂", "𐌃", "𐌄", "𐌅", "𐌂", "𐌇", "𐌉", "𐌉", "𐌊", "𐌋", "𐌌", "𐌍", "𐌏", "𐌐", "𐌒", "𐌓", "𐌔", "𐌕", "𐌖", "𐌖", "𐌖𐌖", "𐌗", "𐌖", "𐌆"];
-minuscules["Vieil italique"] = majuscules["Vieil italique"];
-chiffres["Vieil italique"] = chiffres["Normal"];
-
-majuscules["Phénicien"] = ["𐤀", "𐤁", "𐤂", "𐤃", "𐤄", majuscules["Normal"][5], "𐤂", "𐤇", "𐤉", "𐤉", "𐤊", "𐤋", "𐤌", "𐤍", "𐤏", "𐤐", "𐤒", "𐤓", "𐤔", "𐤕", "𐤅", "𐤅", "𐤅𐤅", "𐤎", "𐤅", "𐤆"];
-minuscules["Phénicien"] = majuscules["Phénicien"];
-chiffres["Phénicien"] = chiffres["Normal"];
-
-majuscules["Lycien"] = ["𐊀", "𐊂", "𐊄", "𐊅", "𐊆", "𐊇", "𐊄", "𐊛", "𐊊", "𐊊", "𐊋", "𐊍", "𐊎", "𐊏", "𐊒", "𐊓", "𐊔", "𐊕", "𐊖", "𐊗", majuscules["Normal"][20], majuscules["Normal"][21], majuscules["Normal"][22], majuscules["Normal"][23], "𐊈"];
-minuscules["Lycien"] = majuscules["Lycien"];
-chiffres["Lycien"] = chiffres["Normal"];
