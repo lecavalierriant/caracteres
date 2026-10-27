@@ -16,17 +16,15 @@
 <h1>Alphabets</h1>
 
 <p>Entrez le texte à réécrire avec les différents alphabets :</p>
-<input type = "text" placeholder = "Texte" id = "entrée">
+<input onchange = "alphabets()" type = "text" placeholder = "Texte" id = "entrée">
 <br>
-<button onclick = "alphabets()">Réécrire</button>
-<button onclick = "exporterTexte()" style = "display: none;">Exporte en fichier texte [.txt]</button>
+<button onclick = "exporterTexte()" style = "display: none;">Exporter en fichier .txt</button>
 <table><tr><th onclick = "copier(this)" id = "sortie"></th></tr></table>
 <br>
 
 <div>
 <table>
-	<tr><th>Latin</th></tr>
-	<tr><td>Latin</td></tr>
+	<tr><td>Normal</td></tr>
 	<tr><td>𝔸𝕛𝕠𝕦𝕣𝕖́</td></tr>
 	<tr><td>𝐌𝐚𝐭𝐡𝐞́𝐦𝐚𝐭𝐢𝐪𝐮𝐞 𝐠𝐫𝐚𝐬</td></tr>
 	<tr><td>𝑀𝑎𝑡ℎ𝑒́𝑚𝑎𝑡𝑖𝑞𝑢𝑒 𝑖𝑡𝑎𝑙𝑖𝑞𝑢𝑒</td></tr>
@@ -46,24 +44,6 @@
 	<tr><td>𝙈𝙖𝙩𝙝𝙚́𝙢𝙖𝙩𝙞𝙦𝙪𝙚 𝙞𝙩𝙖𝙡𝙞𝙦𝙪𝙚 𝙜𝙧𝙖𝙨 𝙨𝙖𝙣𝙨 𝙚𝙢𝙥𝙖𝙩𝙩𝙚𝙢𝙚𝙣𝙩</td></tr>
 	<tr><td>ᴹᵒᵈⁱᶠⁱᶜᵃᵗⁱᶠ</td></tr>
 	<tr><td>ᵢₙdᵢcₑ</td></tr>
-</table>
-<table>
-	<tr><th>Grec</th></tr>
-	<tr><td>Γρεγ</td></tr>
-	<tr><td>𝝡𝝰𝞃𝝶𝝴́𝝻𝝰𝞃𝝸q𝞄𝝴 𝝲𝞀𝝰𝞂 𝞂𝝰𝝼𝞂 𝝴𝝻𝝿𝝰𝞃𝞃𝝴𝝻𝝴𝝼𝞃</td></tr>
-	<tr><td>𝞛𝞪𝞽𝞰𝞮́𝞵𝞪𝞽𝞲q𝞾𝞮 𝞲𝞽𝞪𝞴𝞲q𝞾𝞮 𝞬𝞺𝞪𝞼 𝞼𝞪𝞶𝞼 𝞮𝞵𝞹𝞪𝞽𝞽𝞮𝞵𝞮𝞶𝞽</td></tr>
-	<tr><td>𝚳𝛂𝛕𝛈𝛆́𝛍𝛂𝛕𝛊q𝛖𝛆 𝛄𝛒𝛂𝛔</td></tr>
-	<tr><td>𝛭𝛼𝜏𝜂𝜀́𝜇𝛼𝜏𝜄q𝜐𝜀 𝜄𝜏𝛼𝜆𝜄q𝜐𝜀</td></tr>
-	<tr><td>𝜧𝜶𝝉𝜼𝜺́𝝁𝜶𝝉𝜾q𝝊𝜺 𝜾𝝉𝜶𝝀𝜾q𝝊𝜺 𝜸𝝆𝜶𝝈</td></tr>
-</table>
-<table>
-	<tr><th>Autres</th></tr>
-	<tr><td>𐌲𐍉𐍄𐌹𐌵𐍅𐌴</td></tr>
-	<tr><td>Гурілліqуе</td></tr>
-	<tr><td>Ⲅⲟⲡⲧⲉ</td></tr>
-	<tr><td>𐌖𐌉𐌄𐌉𐌋 𐌉𐌕𐌀𐌋𐌉𐌒𐌖𐌄</td></tr>
-	<tr><td>𐤐𐤇𐤄́𐤍𐤉𐤂𐤉𐤄𐤍</td></tr>
-	<tr><td>𐊍Y𐊄𐊊𐊆𐊏</td></tr>
 </table>
 </div>
 
